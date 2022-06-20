@@ -477,6 +477,8 @@ meuApp.directive('cpfValido', function () {
 
                 // console.log("cpf test", valor, testaCPF(valor))
 
+                console.log("attrs ", attrs, scope)
+
                 ctrl.$setValidity('cpfValido', testaCPF(valor));
 
             });
