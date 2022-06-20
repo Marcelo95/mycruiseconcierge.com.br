@@ -1068,7 +1068,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 mt-20 text-right">
 
-					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(2)">
+					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(2, true)">
 						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
@@ -1163,7 +1163,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 mt-20 text-right">
 
-					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(3)">
+					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(3, true)">
 					 <i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
@@ -1338,7 +1338,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 mt-20 text-right">
 
-					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(4)">
+					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(4, true)">
 						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
@@ -1383,7 +1383,7 @@ get_header(); ?>
 					<div class="col-sm-6 mt-20 text-right">
 
 
-						<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(5)">
+						<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(5, true)">
 							<i class="fa fa-arrow-left"></i> VOLTAR
 						</button>
 
