@@ -1467,7 +1467,7 @@ get_header(); ?>
 			//data-futura-desembarque
 
 			(function($) {
-				var dateFormat = "mm/dd/yy",
+				var dateFormat = "dd/mm/yy",
 					from = $(".data-futura-embarque")
 					.datepicker({
 						language: "pt-BR",
