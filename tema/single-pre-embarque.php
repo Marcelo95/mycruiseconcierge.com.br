@@ -483,7 +483,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 mt-20 text-right">
 
-					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(1)">
+					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(1, true)">
 						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
