@@ -474,7 +474,7 @@ meuApp.directive('cpfValido', function () {
            // scope.$watch(attrs.ngModel, function () {
             scope.$watch(attrs.cpfValido, function (value) {
 
-                if(value.toLowerCase() == "brasil"){
+                if(value.toString().toLowerCase() == "brasil"){
                     var valor = elem[0].value.replace(/[^0-9]/g, '').slice(0, 11);
 
                     // console.log("cpf test", valor, testaCPF(valor))
@@ -482,7 +482,7 @@ meuApp.directive('cpfValido', function () {
     
                     ctrl.$setValidity('cpfValido', testaCPF(valor));
                 } 
-                
+
 
                 
 
