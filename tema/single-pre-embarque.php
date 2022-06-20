@@ -1453,54 +1453,19 @@ get_header(); ?>
 				startDate: today
 			});
 
-			// jQuery('.input-daterange').datepicker({
-			// 	language: "pt-BR",
-			// 	autoclose: true,
-			// 	minDate: 0,
-			// }).on('hide', function(e) {
-			// 	if (jQuery(e.target).hasClass("data-futura-embarque")) {
-			// 		jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
-			// 	}
-			// });
-
-			//data-futura-embarque
-			//data-futura-desembarque
-
-			(function($) {
-				var dateFormat = "dd/mm/yy",
-					from = $(".data-futura-embarque")
-					.datepicker({
-						language: "pt-BR",
-						autoclose: true,
-						minDate: 0,
-						beforeShow : function(e){
-							from.datepicker("option", "minDate", 0);
-						}
-					})
-					.on("change", function() {
-						//to.datepicker("option", "minDate", getDate(this));
-					}),
-
-					to = $(".data-futura-desembarque").datepicker({
-						language: "pt-BR",
-						autoclose: true,
-						minDate : getDate( from )
-					})
-					.on("change", function() {
-						//from.datepicker("option", "maxDate", getDate(this));
-					});
-
-				function getDate(element) {
-					var date;
-					try {
-						date = $.datepicker.parseDate(dateFormat, element.value);
-					} catch (error) {
-						date = null;
-					}
-
-					return date;
+			jQuery('.input-daterange').datepicker({
+				language: "pt-BR",
+				autoclose: true,
+				minDate: 0,
+				beforeShow: function(e) {
+					console.log("beforeShow ", e)
+					//from.datepicker("option", "minDate", 0);
 				}
-			})(jQuery);
+			}).on('hide', function(e) {
+				if (jQuery(e.target).hasClass("data-futura-embarque")) {
+					jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
+				}
+			});
 
 
 
