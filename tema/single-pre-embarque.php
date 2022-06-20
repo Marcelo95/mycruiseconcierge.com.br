@@ -51,7 +51,7 @@ if (isset($_GET["format"]) || isset($_POST["format"])) {
 			if (function_exists("get_field") && $arquivo_pdf = get_field('arquivo_pdf', $my_postid)) {
 
 				$content = get_home_path_v1() . $arquivo_pdf;
-				$content = str_replace( get_option( 'siteurl' ), "", $content);
+				$content = str_replace(get_option('siteurl'), "", $content);
 				$content = str_replace("public_html//wp-content", "public_html/wp-content", $content);
 			} else {
 				$content_post = get_post($my_postid);
@@ -235,28 +235,12 @@ get_header(); ?>
 				</p>
 			</div>
 
+
+
 			<div class="col-sm-6">
-				<div class="form-group " ng-class="{'has-error-disable' : my_form.nome_agencia.$invalid  }">
-					<input type="text" class="input-placeholder" required="" placeholder="*nome da agência" name="nome_agencia" id="nome_agencia" ng-model="data.cruzeiro.nome_agencia">
+				<div class="form-group" ng-class="{'has-error-disable' : my_form.num_reserva.$invalid  }">
+					<input type="text" class="input-placeholder" required="" placeholder="*n° da reserva" name="num_reserva" id="num_reserva" ng-model="data.cruzeiro.num_reserva">
 				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="row">
-
-					<div class="col-sm-6">
-						<div class="form-group" ng-class="{'has-error' : my_form.cnpj_agencia.$invalid  }">
-							<input type="text" class="input-placeholder cnpj" placeholder="CNPJ da agência" name="cnpj_agencia" id="cnpj_agencia" ng-model="data.cruzeiro.cnpj_agencia">
-						</div>
-					</div>
-
-					<div class="col-sm-6">
-						<div class="form-group" ng-class="{'has-error-disable' : my_form.num_reserva.$invalid  }">
-							<input type="text" class="input-placeholder" required="" placeholder="*n° da reserva" name="num_reserva" id="num_reserva" ng-model="data.cruzeiro.num_reserva">
-						</div>
-
-					</div>
-				</div>
-
 
 			</div>
 			<div class="col-sm-6">
@@ -271,7 +255,7 @@ get_header(); ?>
 
 							<?php foreach ($ships_names as $key => $ship_name) { ?>
 								<option value="<?php echo $ship_name; ?>"><?php echo $ship_name; ?></option>
-							<?php }?>
+							<?php } ?>
 
 						</select>
 					<?php
@@ -320,6 +304,19 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="clearfix"></div>
+
+			<div class="col-sm-6">
+				<div class="form-group " ng-class="{'has-error-disable' : my_form.nome_agencia.$invalid  }">
+					<input type="text" class="input-placeholder" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome da agência" name="nome_agencia" id="nome_agencia" ng-model="data.cruzeiro.nome_agencia">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group" ng-class="{'has-error' : my_form.cnpj_agencia.$invalid  }">
+					<input type="text" class="input-placeholder cnpj" ng-required="data.cruzeiro.is_agente==1" placeholder="CNPJ da agência" name="cnpj_agencia" id="cnpj_agencia" ng-model="data.cruzeiro.cnpj_agencia">
+				</div>
+			</div>
+
+
 			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
 				<div class="form-group" ng-class="{'has-error-disable' : my_form.nome_agente.$invalid  }">
 					<input type="text" class="input-placeholder" name="nome_agente" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome completo do agente de viagem" id="nome_agente" ng-model="data.cruzeiro.nome_agente">
