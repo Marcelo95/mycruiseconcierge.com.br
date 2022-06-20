@@ -236,14 +236,7 @@ get_header(); ?>
 			</div>
 
 
-
-			<div class="col-sm-6">
-				<div class="form-group" ng-class="{'has-error-disable' : my_form.num_reserva.$invalid  }">
-					<input type="text" class="input-placeholder" required="" placeholder="*n° da reserva" name="num_reserva" id="num_reserva" ng-model="data.cruzeiro.num_reserva">
-				</div>
-
-			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-3">
 				<div class="form-group" ng-class="{'has-error-disable' : my_form.nome_navio.$invalid  }">
 					<?php
 					if (function_exists("get_field") && $ships_names = get_field('ships_name', get_the_id())) {
@@ -273,6 +266,13 @@ get_header(); ?>
 
 				</div>
 			</div>
+			<div class="col-sm-3">
+				<div class="form-group" ng-class="{'has-error-disable' : my_form.num_reserva.$invalid  }">
+					<input type="text" class="input-placeholder" required="" placeholder="*n° da reserva" name="num_reserva" id="num_reserva" ng-model="data.cruzeiro.num_reserva">
+				</div>
+
+			</div>
+		
 
 
 			<div class="col-sm-6">
