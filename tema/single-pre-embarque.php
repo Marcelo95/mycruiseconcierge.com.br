@@ -272,7 +272,7 @@ get_header(); ?>
 				</div>
 
 			</div>
-		
+
 			<div class="col-sm-6">
 				<div class="row input-daterange">
 					<div class="col-sm-6">
@@ -1453,15 +1453,53 @@ get_header(); ?>
 				startDate: today
 			});
 
-			jQuery('.input-daterange').datepicker({
-				language: "pt-BR",
-				autoclose: true,
-				minDate: '0',
-			}).on('hide', function(e) {
-				if (jQuery(e.target).hasClass("data-futura-embarque")) {
-					jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
+			// jQuery('.input-daterange').datepicker({
+			// 	language: "pt-BR",
+			// 	autoclose: true,
+			// 	minDate: 0,
+			// }).on('hide', function(e) {
+			// 	if (jQuery(e.target).hasClass("data-futura-embarque")) {
+			// 		jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
+			// 	}
+			// });
+
+			//data-futura-embarque
+			//data-futura-desembarque
+
+			$(function() {
+				var dateFormat = "mm/dd/yy",
+					from = $(".data-futura-embarque")
+					.datepicker({
+						language: "pt-BR",
+						autoclose: true,
+						changeMonth: true,
+						minDate: 0
+					})
+					.on("change", function() {
+						to.datepicker("option", "minDate", getDate(this));
+					}),
+					to = $(".data-futura-desembarque").datepicker({
+						language: "pt-BR",
+						autoclose: true,
+						changeMonth: true,
+					})
+					.on("change", function() {
+						from.datepicker("option", "maxDate", getDate(this));
+					});
+
+				function getDate(element) {
+					var date;
+					try {
+						date = $.datepicker.parseDate(dateFormat, element.value);
+					} catch (error) {
+						date = null;
+					}
+
+					return date;
 				}
 			});
+
+
 
 			jQuery(".data-passada").datepicker({
 				autoclose: true,
