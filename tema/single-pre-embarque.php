@@ -309,7 +309,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
-				<div class="form-group" ng-class="{'has-error' : my_form.cnpj_agencia.$invalid  }">
+				<div class="form-group" ng-class="{'has-error-disable' : my_form.cnpj_agencia.$invalid  }">
 					<input type="text" class="input-placeholder cnpj" ng-required="data.cruzeiro.is_agente==1" placeholder="CNPJ da agência" name="cnpj_agencia" id="cnpj_agencia" ng-model="data.cruzeiro.cnpj_agencia">
 				</div>
 			</div>
@@ -1456,7 +1456,7 @@ get_header(); ?>
 			jQuery('.input-daterange').datepicker({
 				language: "pt-BR",
 				autoclose: true,
-				minDate: 0,
+				minDate: new Date(),
 			}).on('hide', function(e) {
 				if (jQuery(e.target).hasClass("data-futura-embarque")) {
 					jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
