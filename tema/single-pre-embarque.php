@@ -1472,19 +1472,19 @@ get_header(); ?>
 					.datepicker({
 						language: "pt-BR",
 						autoclose: true,
-						changeMonth: true,
 						minDate: 0
 					})
 					.on("change", function() {
-						to.datepicker("option", "minDate", getDate(this));
+						//to.datepicker("option", "minDate", getDate(this));
 					}),
+
 					to = $(".data-futura-desembarque").datepicker({
 						language: "pt-BR",
 						autoclose: true,
-						changeMonth: true,
+						minDate : getDate( from )
 					})
 					.on("change", function() {
-						from.datepicker("option", "maxDate", getDate(this));
+						//from.datepicker("option", "maxDate", getDate(this));
 					});
 
 				function getDate(element) {
