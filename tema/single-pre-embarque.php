@@ -1456,7 +1456,7 @@ get_header(); ?>
 			jQuery('.input-daterange').datepicker({
 				language: "pt-BR",
 				autoclose: true,
-				minDate: new Date(),
+				minDate: '0',
 			}).on('hide', function(e) {
 				if (jQuery(e.target).hasClass("data-futura-embarque")) {
 					jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
