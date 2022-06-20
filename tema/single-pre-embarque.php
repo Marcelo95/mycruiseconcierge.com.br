@@ -303,12 +303,12 @@ get_header(); ?>
 			</div>
 			<div class="clearfix"></div>
 
-			<div class="col-sm-6">
+			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
 				<div class="form-group " ng-class="{'has-error-disable' : my_form.nome_agencia.$invalid  }">
 					<input type="text" class="input-placeholder" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome da agência" name="nome_agencia" id="nome_agencia" ng-model="data.cruzeiro.nome_agencia">
 				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
 				<div class="form-group" ng-class="{'has-error' : my_form.cnpj_agencia.$invalid  }">
 					<input type="text" class="input-placeholder cnpj" ng-required="data.cruzeiro.is_agente==1" placeholder="CNPJ da agência" name="cnpj_agencia" id="cnpj_agencia" ng-model="data.cruzeiro.cnpj_agencia">
 				</div>
