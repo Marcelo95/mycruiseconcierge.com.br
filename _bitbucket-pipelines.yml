@@ -1,0 +1,15 @@
+# This is a sample build configuration for Other.
+# Check our guides at https://conflence.atlassian.com/x/5Q4SMwu for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update
+          - apt-get -qq install git-ftp
+          #- git ftp init --user $FTP_USERNAME_PROD --passwd $FTP_PASSWORD_PROD ftp://ftp.beachlock.com.br/public_html/wp-content/themes/beachlock.com.br/
+          #- git ftp push --user $FTP_USERNAME_PROD --passwd $FTP_PASSWORD_PROD ftp://ftp.beachlock.com.br/public_html/wp-content/themes/beachlock.com.br/

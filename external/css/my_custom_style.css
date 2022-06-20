@@ -1,0 +1,1273 @@
+/*** *
+ * PAGINA DE BUSCA
+ * 25/02/2021
+ * 2WP
+ * **/
+
+
+@font-face {
+font-family: "Calibri";
+src: url("https://mycruiseconcierge.com.br/wp-content/uploads/2021/03/calibri-7.woff");
+src: url("https://mycruiseconcierge.com.br/wp-content/uploads/2021/03/calibri-7.woff") format("woff"),
+}
+
+@font-face {
+font-family: "Century";
+src: url('https://mycruiseconcierge.com.br/wp-content/uploads/2021/03/Century-Gothic-1.ttf') format('truetype');
+}
+.sombra.NDI_button.btn_classbudget.btnBarco{
+	border-width: 0px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 12px !important;
+    width: 50px !important;
+    min-width: 134px !important;
+}
+#divMundoBarco input[type="submit"] {
+    background: #B3AB88 !important;
+    border: none !Important;
+    margin-top: 0px;
+    font-size: 12px !important;
+}
+
+span.NDI_text::first-letter{
+	text-transform:unset !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl02_ListView1_ctrl3_mes2OtraMoneda{
+	margin-left: 29px !important;
+    display: block;
+}
+.sombra.NDI_button.btn_classbudget.btnItinerario{
+	    margin-top: 0px !important;
+    margin-right: 10px;
+    height: 40px !important;
+    font-size: 12px;
+    min-width: 134px !important;
+    margin-left: 30px !important;
+}
+#FiltroBarco span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label4.lblBuscador.ND_FontFamily{
+	margin-left:0 !important;
+}
+.cssToolTipOferta input[type="submit"]{
+    text-transform: Capitalize !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label4{
+    text-align:left !important;
+    margin-left:30px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblTitItin{
+    text-align: left !Important;
+    
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_btnItinerario.NDI_button{
+    font-size:12px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_btnItinerario{
+    height: 40px !important;
+    min-width: 134px !important;
+    margin-left: 30px !important;
+    font-size:16px !Important;
+}
+.tblPrecioAux td span {
+    font-weight: 300 !important;
+    text-transform: capitalize !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblDatosCabina{
+	padding: 0 !important;
+    display: block !important;
+    text-align: center !important;
+}
+.ResultsTable{
+	    MARGIN-TOP: -45PX !IMPORTANT;
+}
+
+/**/
+.tblPreRes.ResultsTable tr:not(.hasTooltip) > td{
+	font-weight:300 !important;
+}
+
+/*NOME NAVIO*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_lbl48{
+	text-transform:lowercase !Important;
+    display:inline-block
+   
+}
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_lbl48::first-letter{
+	  text-transform: none !important;
+
+
+}
+/*NOME DESTINO*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_Label6{
+    text-transform:lowercase;
+    display:inline-block;
+}
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_Label6:first-letter{
+  text-transform: none !important;
+}
+/*CIDADE NEGRITO*/
+.NDI_text > b{
+    font-weight: 400 !important;
+}
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label1.lblH1{
+	text-align: left !important;
+    font-size: 16px !important;
+}
+
+/*REMOVE - */
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label14:first-letter{
+	color:transparent !Important;
+}
+
+/*PREÇOS EM BOLD*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTotal{
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTasas2{
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecBase2{
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTot1{
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTot2{
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTasas1{
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecBase1{
+	font-weight:600 !important;
+}
+
+/*BOTAO IMPRIMIR*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label15{
+	font-weight:600 !important;	
+}
+
+
+#ButtonImprimir{
+	left: auto !important;
+    float: left !important;
+    text-align: left !important;
+    width: 260px !important;
+    color: #585858 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    margin-top: 50px !important;
+}
+
+/*NOTAS DA RESERVA*/
+#NotasReserva span.lblIncl{
+	font-weight:300 !Important;
+}
+/*Altera a frase de primeiro passageiro para 1 hospede*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label13:before{
+	content:"1º HÓSPEDE";
+	font-family: Calibri;
+	font-weight:400;
+	font-size: 18px !important;
+	color: #333 !important;
+}
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecRGB3550_2OtraMoneda:after{
+	content:"" !important;
+	color:transparent;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecRGB3550_2:after{
+	content:"" !important;
+	color:transparent;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecRGB3550_2:after{
+	content:"" !important;
+	color:transparent;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label18:before{
+	content:"2º HÓSPEDE";
+	font-family: Calibri;
+	font-weight:400;
+	color: #333 !important;
+	font-size: 18px !important;
+    
+}
+td > span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label18:before{
+    color:#324353 !important;
+}
+td > span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label13:before{
+    color:#324353 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label18{
+	color:#E4E9EB !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lbl_envioMailOK{
+	font-weight: 300 !Important;
+    font-size: 16px !important;
+	font-family: Century !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label13{
+	color:#E4E9EB !important;
+}
+.tblPrecio tr {
+    height: 10px !important;
+}
+.pnlInfoMidResumen{
+	background:#fff !Important;
+}
+.LogoAgencia{
+margin-top: 70px;
+}
+/*Remove o 1*/
+#lblTextoArrowlblBuscar:first-letter{
+  color:transparent !important;
+}
+
+/*Altera o fundo do titulo da etapa*/
+.pnlPasos1apag .right-arrow {
+    background-color: #beb28c !important;
+}
+
+/*Altera a seta do titulo da etapa*/
+.pnlPasos1apag .right-arrow:after {
+    border-left-color: #beb28c !important;
+}
+.right-arrow{
+padding: 13.5px 14px 14px 14px !important;
+}
+
+/*Altera o fundo header*/
+.ND_HeaderBuscador{
+	background-color:#324353!important;
+}
+.NDI_HeaderPanelSalidas{
+    background-color:#fff!important;
+}
+.NDI_FontFamily_Header {
+    color: #324353 !important;
+    font-weight: 400 !important;
+	Font-family:Calibri !important;
+   font-size: 18px !important;
+}
+.tblSalidasTit {
+    background: #324353 !important;
+}
+.NDI_button {
+    background: #B3AB88 !important;
+    font-family: Calibri !important;
+    text-transform: uppercase !important;
+}
+.cssToolTipOferta.tblSalidasNorm{
+	display:none !Important;
+}  
+/*fundo produto*/
+.pnlSalidaMid{
+	background: #E4E9EB !Important;
+}
+.pnlSalida tbody{
+	background: #E4E9EB !Important;
+}
+
+/*ICONE X*/
+.tdNoHay {
+    background: url(https://mycruiseconcierge.com.br/wp-content/uploads/2021/03/xxx_btn.png) no-repeat !important;
+    background-position-y: 19px !important;
+    background-position-x: center !important;  
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnBuscar{
+border-width: 0px !important;
+    padding: 10px !important;
+    font-size: 9px !important;
+    letter-spacing: 2px;
+    border-radius: 0 !important;
+    font-weight: 300;
+
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_Label9 > b{
+	font-weight:300 !Important;
+}
+input[type="submit"]{
+	text-transform:uppercase !important;
+}
+.tblSalidas tr{
+	    background: #E4E9EB;
+}
+.tblSalidas .tblSalidasNorm span{
+	color: #324353 !important;
+}
+
+/*INFORMAÇÃO DO PREÇO*/
+.NDI_lblPrecioXCabina{
+	color: #324353 !important;
+	background:#fff !important;
+}
+.NDI_LblDescPrecio{
+	background:#fff !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnRebuscar{
+	border-width: 0px;
+    font-size: 10px !important;
+    width: 94px !important;
+	text-transform:Capitalize !important;
+}
+.btnrounded{
+	    border: 1px solid #374555 !important;
+}
+.NDI_button{
+	background: #B3AB88 !important;
+}
+
+/*Informações do cruzeiro*/
+.NDI_titletext {
+    font-size: 13px !important;
+    line-height: 2 !Important;
+}
+.ND_button:hover{
+	background:#B3AB88;
+}
+.ND_button{
+	background:#B3AB88;
+}
+.NDI_logoDef{
+	object-fit:contain !Important;
+	    max-width: 105px !Important;
+    max-height: 55px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_Label9:after{
+	content:"+";
+}
+.NDI_lblPrecioXCabina{
+	margin-left:17px !important;
+}
+.ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_PanelVentajas{
+	display:none !important;
+}
+.pnlSalidaBotBottom{
+		display:none !important;
+}
+#detalle{
+		display:none !important;
+}
+#lblTextoArrowlblBuscar {
+	width: 100%;
+    text-indent: -100px;
+    font-family: Calibri !important;
+	    font-family: Calibri !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+}
+/*informação abiaxo da busca quantidade de cruizeiros encontrados*/
+.ND_pnlSalida {
+    background-color: #ffffff !important;
+    bottom: -75px !important;
+    box-shadow: 5px 5px 10px #88888859;
+}
+.ND_FontFamily {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+	font-family: Calibri !important;
+
+}
+.ND_buttonReset {
+    position: relative;
+    background-position: -5px !Important;
+    padding-left: 20px !Important;
+    margin-left: 0 !Important;
+    width: 96px !Important;
+    left: -10px !Important;
+}
+
+.RadComboBox_Default .rcbInputCellLeft{
+border-radius: 5px !important;
+width: 282px !important;
+border: solid 1px #beb28c4f !important
+}
+
+
+.divSeccionAgenteCot::before {
+    content: "DADOS DO AGENTE DE VIAGENS";
+    font-family: calibri !important;
+    font-weight: 300 !important;
+        color:#324353 !important;
+    font-size: 18px !important;
+}
+
+.RadComboBox table{
+	border-collapse: separate !important;
+}
+.RadComboBox .rcbArrowCell a{
+	margin-left:-15px !Important;
+}
+.RadComboBox table td.rcbArrowCell{
+	border:none !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_LogoIstLink{
+	display: none !Important;
+}
+
+/*FUNDO ITINERARIO*/
+.divlblTitItin2 {
+	BACKGROUND:#fff !Important;
+	width:81.9% !important;
+	height:35px !Important;
+}
+.lblTitItin2{
+	line-height:1 !important;
+}
+.pnlItinerary .carg, .pnlFin .carg{
+	background-color: #E4E9EB !important;
+	border: solid 1.5px #000;
+	border-radius: 0;
+}
+.lblH1.lblTitItin2{
+    padding-left: 32px !important;
+    color: #324353!important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+}
+.lblH1 {
+    font-size:22px !important;
+    font-family: Calibri !important;
+    line-height: 1 !Important;
+    font-weight: 400 !important;
+	text-align: center !important;
+}
+.tblGVItinerary{
+	width:100% !Important;
+}
+.tblGVItinerary th{
+	min-height:25px !important;
+	height:25px !Important;
+	    padding-left: 10px !important;
+    background:#324353!important;
+}
+#map_canvas {
+    width: 417px !important;
+    height: 350px !important;
+    float: right !important; 
+    margin: 0 35px 0 18px !important;
+}
+.tblGVItinerary td {
+	font-weight: normal !important;
+    padding: 3px !important;
+    text-align: left !important;
+    font-size: 10px !important;
+    height: 26px !important;
+}
+.pnlGVItinerary {
+    width: 441px !important;
+    height: 350px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin-left: 35px !important;
+}
+
+.lblPrecioXCabina {
+    color: #324353!important;;
+    display: block !important;
+    margin-top: 15px !important;
+}
+.btnCerrarPU{
+	    background: url(https://mycruiseconcierge.com.br/wp-content/uploads/2021/03/blue_x.png) no-repeat !important;
+
+}
+
+/*seta reservar*/
+.pnlPasos:not(.pnlPasos1apag) #divArrowlblBuscar{
+	background:#324353 !important;
+}
+.pnlPasos:not(.pnlPasos1apag) #divArrowlblBuscar:after{
+    border-left-color: #324353 !important;
+}
+
+.pnlPasos:not(.pnlPasos1apag) #divArrowlblReservar{
+	background: #65727E !important;
+	margin-left:-2px !Important;
+}
+
+.pnlPasos:not(.pnlPasos1apag) #divArrowlblReservar:after{
+    border-left-color: #65727E !important;
+}
+.pnlPasos:not(.pnlPasos1apag) #lblTextoArrowlblBuscar{
+	text-transform:capitalize !important;
+    font-family: Calibri !important;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+#lblTextoArrowlblReservar:first-letter{
+	display:none !Important;
+	color:transparent !important;
+}
+#lblTextoArrowlblReservar{
+width: 100%;
+    text-indent: -123px;
+    font-family: Calibri !important;
+    font-family: Calibri !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+	
+}
+#Span1{
+	margin-left: -130px;
+}
+#Span1:after{	
+
+    content: "Voltar";
+    font-family: Calibri !important;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-left: 73px;
+    font-size: 15px;
+    line-height: 1;
+}
+#lblTextoArrowlblReservar:After{
+	content:"Disponibilidade";
+	font-family: Calibri !important;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-left: 24px;
+	font-size: 14px;
+	
+}
+#div1 span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lbl_FraseDobleMoneda:first-letter{
+	color:transparent !important;
+}
+#div1 span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label14:first-letter{
+	color:transparent !important;
+}
+#div1 span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lbl_FraseDobleMoneda{
+    color: #131212 !Important;
+    font-size: 10px !important;
+    margin-top: -108px !important;
+    position: absolute !important;
+    font-style: italic !important;
+    text-indent: -5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label14{
+	font-size: 12px !important;
+}
+#div1 span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label14{
+font-size: 12px !important;
+    margin-top: -78px !important;
+    position: absolute;
+    width: 417px;
+    font-style: italic;
+    text-indent: -4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label14{
+	color: #131212;
+    font-size: 10px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label17{
+	color: #131212;
+    font-size: 10px;
+}
+
+.btnCat {
+    border: none !important;
+    padding: 3px 5px 3px 7px !important;
+    text-transform: uppercase !important;
+    width: 83% !important;
+    font-weight: 300 !important;
+    margin-top: -25px !important;
+    font-size: 17px;
+    margin-left: 60px;
+}
+.fntTextoResultadoCabecera2alinea {
+    color: #333 !important;
+    font-weight: 300;
+}
+.desc_categ{
+    width: 61px;
+    display: -webkit-box !IMPORTANT;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !IMPORTANT;
+    margin-bottom: 0;
+    font-size: 10px;
+    font-weight: 100;
+    margin-left: 2px;
+    position: initial;
+    margin-top: 30px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_NoHayCategorias{
+z-index: 999;
+    top: 1vh;
+    height: 150px !important;
+    background: #E4E9EB !important;
+    padding: 25px;
+    width: 49%;
+	position:relative !important;
+}
+#lblTextoArrowlblReservar:nth-letter(3){
+	text-transform:uppercase !Important;
+}
+#lblTextoArrowlblBuscar:nth-letter(3){
+	text-transform:uppercase !Important;
+}
+.pnlInfoMidMid {
+    background-color: #E4E9EB !important;
+}
+#divcontenedor{
+	background: #E4E9EB;
+}
+.BackColorAzulFuerte {
+    background-color: #324353 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_pnlVolver div.arrow-left.BorderLeftColorAzulFuerte{
+    border-left-color: #324353 !important;
+	border-right-color: #324353 !important;
+}
+.arrow-left{
+	    border-left-color: #324353 !important;
+
+}
+#Div3{
+	    background-color: #fff !important; 
+}
+.lblTasas{
+	    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px !important;
+    display: block;
+}
+#Div3 > div{
+	text-align: center;
+    font-size: 18px;
+    color: #41515F !important;
+    text-shadow: none !important;
+}
+#divMundoBarco input[type="submit"]{
+	background: #B3AB88 !important;
+	border:none !Important;
+    margin-top:60px;
+}
+.lblResumenTit {
+    background-color: #324353 !important;
+    color: white !important;
+}
+.lineaCat {
+    border-bottom: 2px solid #324353 !important;
+	background:#EFEDEC !Important;
+}
+.btnCuadradoSeleccionado {
+    background-color: #EFEDEC !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label6{
+    text-align: left !important;
+    display:inline-block;
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: hidden;
+    width: 390px;
+    
+    
+}
+.btnTransparent.btnCuadradoMedidas:first-line{
+    color:#324353;
+    font-weight:600 !important;
+}
+.SerialNumberContainer .SerialNumber{
+	    font-size: 16px !important;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.SerialNumber{
+	font-size:16px !important;
+}
+.SerialNumberContainer .SerialNumber:after{
+	content:"*";
+	
+}
+.buttonCSS{
+	height: 32px !important;
+}
+#btnCatC3{
+    width: 78% !important;
+    font-weight: 300 !important;
+    text-transform: uppercase !important;
+}
+.lblH1.fLeft.lblTitinfo{
+	text-transform: uppercase !important;
+    font-weight: 400 !Important;
+}
+td.ver_btnPresupuestoOFFLINE  input[type="submit"]{
+	    background: #B3AB88 !important;
+		border: none !important;
+}
+.paddingNoGrowWidth{
+	    background: #E4E9EB !Important;
+}
+#btnCatY2{
+	font-weight: 300 !important;
+    text-transform: uppercase !important;
+    width: 80% !important;
+}
+bld.fntTextoResultadoCabecera2alinea.descCrucero{
+	color: #333 !important;
+    font-weight: 300 !important;
+}
+.bld.fntTextoResultadoCabecera2alinea.descCrucero.lblTitinfo{
+	color: #333 !important;
+    font-weight: 300 !important;
+	text-transform: capitalize;
+}
+.pnlItinSmall .tblGVItinerarySmall tr th{
+padding-left: 9px !important;    
+}
+.pnlItinSmall  .tblGVItinerarySmall tr{
+    height: 20px !important;
+}
+.pnlItinSmall .tblGVItinerarySmall{
+    font-size:9px !Important;
+}
+.pnlItinSmall .tblGVItinerarySmall tr th:nth-child(4){
+    text-align: right !important;
+padding-right: 05px !Important;
+  
+}
+.pnlItinSmall .tblGVItinerarySmall tr td:nth-child(4){
+    text-align: right !important;
+padding-right: 05px !Important;
+  
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Panel20{
+    width: 404px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_tdCandado{
+	width:60% !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_pnlTitulo{
+	background: #EFEDEC !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_rpPersonas_ctl00_Image1{
+	display:none !Important;
+}
+#divNombreBarco #ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_LabelNombreBarco{
+	font-size: 14px !important;
+	font-weight:600 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_rpPersonas_ctl01_Image1{
+	display:none !Important;
+}
+span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblBarco.lblH1{
+	margin-left: -1vw;
+    font-weight: 600 !Important;
+}
+.DatosCabinas div{
+	margin:0 !Important;
+}
+#mapHolder{
+	filter: none !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_divCatyegoriasFBI{
+	    background: #9FC2E6 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_divCatyegoriasFBI > div div div{
+	margin-bottom: 4px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_divCatyegoriasFBI > div div div b{
+	margin-left: 3px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_pnlCabinas{
+	max-height: 1912px !important;
+}
+.SerialNumber:after{
+	
+}
+.btnCuadradoMedidas{
+	text-transform: uppercase !important;
+}
+.btnCuadradoMedidas > br:after{
+	
+}
+#lblTextoArrowlblBuscar:after{
+    content: "Pesquisar";
+    font-family: Calibri !important;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-left: 24px;
+	font-size: 14px;
+}
+.pnlInfoCab .pnlInfoBarco{
+	background: #fff !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnBarcAbr{
+	background: #B3AB88 !important;
+	border: none !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnItinAbr{
+	background: #B3AB88 !important;
+	border: none !important;
+   
+}
+.tblGVItinerarySmall th {
+    background-color: #324353 !important;
+    color: white !important;
+    padding-left: 10px !important;
+}
+.pnlInfoCab .pnlInfoBarco {
+    background: #fff !important;
+}
+.pnlInfoCab .pnlInfoItinerario {
+    background: #fff !important;
+}
+.tblGVItinerary th, .tblGVItinerarySmall th {
+    background-color: #324353 !important;
+    color: white !important;
+    padding-left: 5px !important;
+}
+.tblGVItinerary th:nth-child(3){
+    margin-left: -18px !Important;
+    display: block !important;
+    line-height: 2.5 !important;
+}
+.tblGVItinerary tr td:nth-child(4){
+      text-align:right !important;
+}
+.tblGVItineraryOdd td:nth-child(4){
+    text-align:right !important;
+}
+
+.pnlPasos:not(.pnlPasos1apag) #lblTextoArrowlblBuscar {
+  text-transform: lowercase;
+    font-family: Calibri !important;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.pnlPasos:not(.pnlPasos1apag) #lblTextoArrowlblBuscar:first-letter,
+.pnlPasos:not(.pnlPasos1apag) #lblTextoArrowlblBuscar:first-line {
+    font-family: Calibri !important;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+/*PAGINAÇÃO*/
+.pagSel{
+	background-color: #30404F !Important;
+}
+
+.LinkButton1{
+	text-decoration: none !important;
+    color: black !important;
+    font-size: 12px !important;
+    width: 100% !important;
+    text-align: right !important;
+    float: right !important;
+    margin-top: 15px !important;
+    font-weight: bold !Important;
+}
+#SeccionAgente input{
+	width:170px !Important;
+	float:right;
+}
+input#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_chbTieneAgenteViajes{
+	width: 10px !important;
+}
+.pnlInfoFormAux span{
+    font-weight: 300 !Important;
+    line-height: 1.4 !important;
+}
+.tblForm td{
+	    padding: 5px !important;
+    font-weight: bold !important;
+    padding-left: 20px !important;
+}
+
+/* 
+ td .EspaciadoIzdo:after{
+	content:" (*)";
+}
+*/
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Panel19.pnlAgenciaRes{
+	margin-top: 10% !Important;
+}
+/*
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTot1OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecBase1OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTasas1OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTot2OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecBase2OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTot2OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTasas2OtraMoneda:after{
+	content:"*";
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTot1OtraMoneda:after{
+	content:"*";
+}
+*/
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblPrecTotalOtraMoneda:after{
+	content:"*";
+}
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblAgente:after{
+	content:"" !important;
+}
+.titPasajero{
+     color:#324353 !important;
+	font-size: 16px !important;
+    font-weight: 300 !important;
+    text-transform: uppercase !important;
+	font-family:Calibri !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label1{
+	font-size:18px !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnReservar{
+	background: #B3AB88 !important;
+    border: none !important;
+}
+.tblForm.tblFormCot{
+	    margin-bottom: 10px !important;
+    margin-top: 30px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label27{
+         color:#324353 !important;
+
+}
+.titNumPasajero{
+     color:#324353 !important;
+	    font-size: 16px !important;
+    font-weight: 300 !important;
+		font-family:Calibri !Important;
+}
+.backGroundColor1{
+	background:#E4E9EB !Important;
+}
+.EspaciadoIzdo {
+    padding-left: 5px !important;
+    line-height: 1.5 !important;
+}
+input#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_chbTieneAgenteViajes{
+background-color: #fafafa !important;
+    border: 1px solid #cacece !important;
+    box-shadow: none !important;
+    padding: 13px !important;
+    border-radius: 0 !important;
+    display: inline-block !important;
+    position: relative !important;
+    margin-top: -4px !important;
+	width: 34px !important;
+    height: 33px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_datFechaNacimientoPasajero{
+	width:214px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_datFechaNacimientoPasajero{
+		width:214px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1__txtComentarios{
+	width:661px !Important;
+}
+.tblFormCot tbody tr:nth-child(6){
+	    margin-top: 35px !Important;
+    display: block !Important;
+}
+input#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_txtNombreAgencia{
+	    width: 178px !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblComentarios{
+	   margin-left: 20px !important;
+    display: block !important;
+    margin-top: -17px !important;
+    margin-bottom: 0 !important;
+    line-height: 0 !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblNombre:After{
+	content:"Nome (*):";
+	color: black;
+
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_lblNombre{
+    color: transparent !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_lblNombre:After{
+	content:"Nome (*):";
+    margin-left: -40px !important;
+	color: black;
+
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_lblApellido{
+    color: transparent !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblDestinoRes{
+    text-align:left !Important;
+	font-size:12px !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label12{
+    text-align:left !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblResumenTit{
+    font-size: 19px !Important;
+    text-align:left !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_lblApellido:After{
+	content:"Sobrenome (*):";
+    margin-left: -82px !important;
+	color: black;
+
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_lblFecha{
+        color: transparent !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl01_lblFecha:After{
+    	content:"Data de Nascimento (*):";
+        margin-left: -132px !important;
+	color: black;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblApellido:After{
+	content:"Sobrenomes (*):";
+           margin-left: -3px !important;
+	color: black;
+
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblFecha:After{
+	content:"Data de Nascimento (*):";
+	color: black;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblTelefono:After{
+	content:"Telefone (*):";
+	color: black;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblEmail:After{
+	content:"E-mail (*):";
+	color: black;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblEmail{
+				 display: block;
+    color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: -47px;
+}
+
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblTelefono{
+			 display: block;
+    color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: -62px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblFecha{
+		 display: block;
+    color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: -135px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblApellido{
+	 display: block;
+    color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: -84px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_RepeaterPasajeros_ctl00_lblNombre{
+	 display: block;
+    color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: -47px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_LblTitinfoCatego1{
+    color:#324353 !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_LblTitinfoCatego1{
+	    text-align: left !important;
+    margin-bottom: 5px;
+}
+.btnTransparent.btnCuadradoMedidas{
+	font-weight: 100;
+} 
+/*NOME DO AGENTE - AGENTE DE VIAGENS*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblNombreAgente:after{
+	content: "Nome do agente (*)";
+    color: #333;
+    margin-left: -92px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblNombreAgente{
+	text-indent: 10px;
+    overflow: hidden;
+    text-overflow: clip;
+    color: #E4E9EB !important;
+}
+
+/*NOME DA AGÊNCIA*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblNombreAgencia:after{
+	content:"Nome da agência (*)";
+	 color: #333;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblNombreAgencia{
+text-indent: -96px;
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    color: #E4E9EB !important;
+    height: 29px;
+    margin-top: -8px;
+    margin-left: 4px;
+}
+/*EMAIL AGÊNCIA */
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblEmailAgencia:after{
+	content:"E-mail (*)";
+	color: #333;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblEmailAgencia{
+	text-indent: -37px;
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    color: #E4E9EB !important;
+    height: 29px;
+    margin-top: -8px;
+    margin-left: 4px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_PanelTituloCentral{
+    height:150px !Important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnItinAbr{
+    min-width: 79px !important;
+        font-size: 12px !Important;
+padding: 3px 11px !Important;
+    
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_ctrlItinerario1_lblTitItin{
+    text-align:left !important;
+    margin-left:0 !Important;
+}
+span#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_Label2.lblH1{
+    font-weight:600 !Important;
+
+}
+
+/*TELEFONE AGÊNCIA */
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblTelefonoAgencia:after{
+	content:"Telefone (*)";
+	color: #333;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblTelefonoAgencia{
+	text-indent: -50px;
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    color: #E4E9EB !important;
+    height: 29px;
+    margin-top: -8px;
+    margin-left: 4px;
+}
+
+
+/*AJUSTES 11/05/2021*/
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_lbl48, #ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_Label6, #ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_Label266{
+	text-transform:uppercase !important;
+}
+#divMundoBarco{
+	width: 289px !Important;
+    display: block;
+    margin-top: -104px !important;
+    padding: 0;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnItinAbr{
+	display: block;
+    float: left;
+    margin-right: 10px;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_btnBarcAbr{
+margin-right: 0vw;
+    display: block;
+    float: left;
+    padding: 0 !important;
+    font-size: 13px;
+    width: 101px !important;
+    min-width: 45px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl01_ListView1_ctrl3_mes2OtraMoneda{
+	float:left !important; /*Classe nova da 3 coluna*/ 
+	    margin-left: 20% !important; /*Alinhamento do valor em R$*/
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl01_ListView1_ctrl3_dia2{
+	    float: left !important;
+    margin-left: 4% !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_ListView1_ctrl3_dia2{
+	    float: left !important;
+    margin-left: 3% !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl00_ListView1_ctrl3_mes2OtraMoneda{
+	    margin-left: 19% !important;
+    float: left !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_DataList1_ctl04_ListView1_ctrl3_mes2OtraMoneda{
+	margin-left: 20% !important;
+    float: left !important;
+}
+#tdc2 span.cssToolTipOferta > .btnSalida{
+	margin-left: 10px !important;
+}
+#ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_UpdatePanelDatosCabinas{
+	    z-index: 999999;
+    position: relative !important;
+}
+.tblPrecioAux td #ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblFechaSalidaRes{
+display: block !important;
+    color: #000 !important;
+    float: left !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    margin-top: -20px;
+    margin-left: 51%;
+}
+.tblPrecioAux td #ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblCategoriaRes{
+display: block !important;
+    color: #000 !important;
+    float: left !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    margin-top: -20px;
+    margin-left: 51%;
+}
+.tblPrecioAux td #ctl00_ctl00_ContentPlaceHolderBase_ContentPlaceHolder1_lblTipoCabinaRes{
+display: block !important;
+    color: #000 !important;
+    float: left !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    margin-top: -20px;
+    margin-left: 51%;
+}
+.tblRes tr td{
+	width: 20vw;
+	float:left !important;
+}
+.tblRes tr{
+	height: 15px;
+    min-width: 10px;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block;
+    text-align: left;
+}

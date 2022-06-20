@@ -1,0 +1,13 @@
+/* poly-regular - latin */
+@font-face {
+  font-family: 'Poly';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./poly-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Poly-Regular'),
+       url('./poly-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./poly-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./poly-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./poly-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./poly-v10-latin-regular.svg#Poly') format('svg'); /* Legacy iOS */
+}
