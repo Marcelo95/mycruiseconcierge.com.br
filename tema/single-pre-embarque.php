@@ -337,7 +337,7 @@ get_header(); ?>
 
 
 						<button type="submit" class="botao1 btn text-uppercase" data-disabledng-disabled="my_form.$invalid" ng-click="myForm.is_submitted=1; toMenu(2, my_form.$valid)">
-							PRÓXIMO
+							PRÓXIMO <i class="fa fa-arrow-right"></i>
 						</button>
 					</div>
 				</div>
@@ -484,12 +484,12 @@ get_header(); ?>
 				<div class="col-sm-6 mt-20 text-right">
 
 					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(1)">
-						VOLTAR
+						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
 
 					<button type="submit" class="botao1 btn text-uppercase" data-disabledng-disabled="my_form2.$invalid || !isDataDeEmbarqueValid(data.contratante.data_validade_contratante) || existCPFsInValido " ng-click="myForm2.is_submitted=1; toMenu(3, my_form2.$valid)">
-						PRÓXIMO
+						PRÓXIMO <i class="fa fa-arrow-right"></i>
 					</button>
 				</div>
 			</div>
@@ -1069,11 +1069,11 @@ get_header(); ?>
 				<div class="col-sm-6 mt-20 text-right">
 
 					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(2)">
-						VOLTAR
+						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
 					<button type="submit" class="botao1 btn text-uppercase" data-disabledng-disabled="my_form3.$invalid || !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_1) && data.hospede.quantidade_hospedes==1 || !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_2) && data.hospede.quantidade_hospedes==2|| !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_3) && data.hospede.quantidade_hospedes==3 || !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_4) && data.hospede.quantidade_hospedes==4" ng-click="myForm3.is_submitted=1; toMenu(4, my_form3.$valid)">
-						PRÓXIMO
+						PRÓXIMO <i class="fa fa-arrow-right"></i>
 					</button>
 				</div>
 			</div>
@@ -1164,11 +1164,11 @@ get_header(); ?>
 				<div class="col-sm-6 mt-20 text-right">
 
 					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(3)">
-						VOLTAR
+					 <i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
 					<button type="button" class="botao1 btn text-uppercase" data-disabledng-disabled="my_form4.$invalid" ng-click="myForm4.is_submitted=1; toMenu(5, my_form4.$valid)">
-						PRÓXIMO
+						PRÓXIMO <i class="fa fa-arrow-right"></i> 
 					</button>
 				</div>
 			</div>
@@ -1339,11 +1339,11 @@ get_header(); ?>
 				<div class="col-sm-6 mt-20 text-right">
 
 					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(4)">
-						VOLTAR
+						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
 					<button type="submit" class="botao1 btn text-uppercase" data-disabledng-disabled="my_form5.$invalid" ng-click="myForm5.is_submitted=1; toMenu(6, my_form5.$valid)">
-						PRÓXIMO
+						PRÓXIMO <i class="fa fa-arrow-right"></i>
 					</button>
 				</div>
 			</div>
@@ -1384,7 +1384,7 @@ get_header(); ?>
 
 
 						<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(5)">
-							VOLTAR
+							<i class="fa fa-arrow-left"></i> VOLTAR
 						</button>
 
 						<!-- <button type="button" class="botao1 btn text-uppercase" ng-disabled="my_form6.$invalid" ng-click="send()">
