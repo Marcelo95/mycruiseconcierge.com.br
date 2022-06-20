@@ -471,14 +471,13 @@ meuApp.directive( 'cpfValido', function () {
         require: 'ngModel',
         link: function ( scope, elem, attrs, ctrl ) {
 
-            // scope.$watch(attrs.ngModel, function () {
-            scope.$watch( attrs.cpfValido, function ( value ) {
+             scope.$watch(attrs.ngModel, function (value) {
+            //scope.$watch( attrs.cpfValido, function ( value ) {
 
                 if ( value == "brasil" ) {
                     var valor = elem[0].value.replace( /[^0-9]/g, '' ).slice( 0, 11 );
 
                     // console.log("cpf test", valor, testaCPF(valor))
-
 
                     ctrl.$setValidity( 'cpfValido', testaCPF( valor ) );
                 }
