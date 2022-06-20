@@ -1472,7 +1472,10 @@ get_header(); ?>
 					.datepicker({
 						language: "pt-BR",
 						autoclose: true,
-						minDate: 0
+						minDate: 0,
+						beforeShow : function(e){
+							from.datepicker("option", "minDate", 0);
+						}
 					})
 					.on("change", function() {
 						//to.datepicker("option", "minDate", getDate(this));
