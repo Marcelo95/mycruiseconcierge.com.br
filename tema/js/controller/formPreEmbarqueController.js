@@ -482,7 +482,9 @@ meuApp.directive( 'cpfValido', function () {
                     ctrl.$setValidity( 'cpfValido', testaCPF( valor ) );
                 }
                 else {
-                    ctrl.$setValidity( 'cpfValido', true );
+                    //ctrl.$setValidity( 'cpfValido', true );
+                    ctrl.$setPristine();
+                    ctrl.$setUntouched();
                 }
 
 
