@@ -273,8 +273,6 @@ get_header(); ?>
 
 			</div>
 		
-
-
 			<div class="col-sm-6">
 				<div class="row input-daterange">
 					<div class="col-sm-6">
