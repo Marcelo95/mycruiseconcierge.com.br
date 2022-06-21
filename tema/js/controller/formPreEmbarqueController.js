@@ -457,7 +457,7 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
             jQuery.ajax( {
                 type: "GET",
                 dataType: "json",
-                url: `https://viacep.com.br/ws/${cep}json/`,
+                url: `https://viacep.com.br/ws/${cep}/json/`,
                 success: function ( r ) {
                     resolve( r );
                 }
