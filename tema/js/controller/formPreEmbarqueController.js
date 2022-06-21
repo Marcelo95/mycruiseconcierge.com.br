@@ -437,6 +437,40 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
     }
 
 
+    $scope.setAddressByCep = function(cep, address_scope, city_scope, uf_scope){
+
+        $scope.getCep().then(function(r){
+            address_scope = '', 
+            city_scope = '', 
+            uf_scope = '';
+
+        }).catch((error) => {
+            address_scope = '', city_scope = '', uf_scope = '';
+        }).finally(()=>{
+            $scope.$apply();
+        });
+    }
+
+
+    $scope.getCep = function ( cep ) {
+        return new Promise( function ( resolve, reject ) {
+            jQuery.ajax( {
+                type: "POST",
+                data: postData,
+                dataType: "json",
+                url: `https://viacep.com.br/ws/${cep}json/`,
+                success: function ( r ) {
+                    resolve( r );
+                }
+
+            } ).fail( function ( r ) {
+                console.log( r );
+                reject( r );
+            } );
+
+        } );
+
+    }
 
 
 } );

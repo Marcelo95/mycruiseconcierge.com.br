@@ -437,7 +437,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-9">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form2.cep_contratante.$invalid  }">
-						<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_contratante" required="" placeholder="*cep" id="cep_contratante" ng-model="data.contratante.cep_contratante">
+						<input type="text" ng-blur="setAddressByCep(data.contratante.cep_contratante, data.contratante.endereco_contratante, data.contratante.cidade_contratante, data.contratante.uf_contratante)" autocomplete="off" class="input-placeholder cep" name="cep_contratante" required="" placeholder="*cep" id="cep_contratante" ng-model="data.contratante.cep_contratante">
 					</div>
 				</div>
 			</div>
