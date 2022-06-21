@@ -437,17 +437,22 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
     }
 
 
-    $scope.setAddressByCep = function(cepEvent, address_scope, city_scope, uf_scope){
+    $scope.setAddressByCep = function(cepEvent, id_address, id_city, id_uf){
+
+        let address = document.getElementById(id_address), 
+        city = document.getElementById(id_city), 
+        uf = document.getElementById(id_uf);
 
         $scope.getCep(cepEvent.target.value).then(function(r){
-            address_scope = r.logradouro, 
-            city_scope = r.localidade, 
-            uf_scope = r.uf;
+            address.value = r.logradouro, 
+            city.value = r.localidade, 
+            uf.value = r.uf;
 
         }).catch((error) => {
-            address_scope = '', city_scope = '', uf_scope = '';
+            address.value = '', city.value  = '', uf.value = '';
+
         }).finally(()=>{
-            $scope.$applyAsync();
+            $scope.$apply();
         });
     }
 
