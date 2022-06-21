@@ -56,7 +56,12 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
             $scope.data.hospede["local_emissao_hospede_" + id] = angular.copy( $scope.data.contratante.local_emissao_contratante );
             $scope.data.hospede["data_expedicao_hospede_" + id] = angular.copy( $scope.data.contratante.data_expedicao_contratante );
             $scope.data.hospede["data_validade_hospede_" + id] = angular.copy( $scope.data.contratante.data_validade_contratante );
+            
             $scope.data.hospede["endereco_hospede_" + id] = angular.copy( $scope.data.contratante.endereco_contratante );
+            
+            $scope.data.hospede["numero_do_endereco_hospede_" + id] = angular.copy( $scope.data.contratante.numero_do_endereco_contratante );
+            $scope.data.hospede["complemento_hospede_" + id] = angular.copy( $scope.data.contratante.complemento_contratante );
+            
             $scope.data.hospede["cidade_hospede_" + id] = angular.copy( $scope.data.contratante.cidade_contratante );
             $scope.data.hospede["cep_hospede_" + id] = angular.copy( $scope.data.contratante.cep_contratante );
             $scope.data.hospede["uf_hospede_" + id] = angular.copy( $scope.data.contratante.uf_contratante );
@@ -77,6 +82,10 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
             $scope.data.hospede["data_expedicao_hospede_" + id] = "";
             $scope.data.hospede["data_validade_hospede_" + id] = "";
             $scope.data.hospede["endereco_hospede_" + id] = "";
+
+            $scope.data.hospede["numero_do_endereco_hospede_" + id] = "";
+            $scope.data.hospede["complemento_hospede_" + id] = "";
+
             $scope.data.hospede["cidade_hospede_" + id] = "";
             $scope.data.hospede["cep_hospede_" + id] = "";
             $scope.data.hospede["uf_hospede_" + id] = "";
@@ -98,6 +107,10 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
             console.log( "setou" );
 
             $scope.data.hospede["endereco_hospede_" + id] = angular.copy( $scope.data.hospede['endereco_hospede_1'] );
+
+            $scope.data.hospede["numero_do_endereco_hospede_" + id] = angular.copy( $scope.data.hospede['numero_do_endereco_hospede_1'] );
+            $scope.data.hospede["complemento_hospede_" + id] = angular.copy( $scope.data.hospede['complemento_hospede_1'] );
+
             $scope.data.hospede["cidade_hospede_" + id] = angular.copy( $scope.data.hospede['cidade_hospede_1'] );
             $scope.data.hospede["cep_hospede_" + id] = angular.copy( $scope.data.hospede['cep_hospede_1'] );
             $scope.data.hospede["uf_hospede_" + id] = angular.copy( $scope.data.hospede['uf_hospede_1'] );
@@ -107,6 +120,10 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
 
         else {
             $scope.data.hospede["endereco_hospede_" + id] = "";
+
+            $scope.data.hospede["numero_do_endereco_hospede_" + id] = "";
+            $scope.data.hospede["complemento_hospede_" + id] = "";
+
             $scope.data.hospede["cidade_hospede_" + id] = "";
             $scope.data.hospede["cep_hospede_" + id] = "";
             $scope.data.hospede["uf_hospede_" + id] = "";
