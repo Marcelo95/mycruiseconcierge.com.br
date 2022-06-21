@@ -618,7 +618,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_1.$invalid  }">
-								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_1" placeholder="*cep" id="cep_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.cep_hospede_1">
+								<input type="text" ng-blur="setAddressHospedesByCep($event, 1)" autocomplete="off" class="input-placeholder cep" name="cep_hospede_1" placeholder="*cep" id="cep_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.cep_hospede_1">
 							</div>
 						</div>
 					</div>
@@ -752,7 +752,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_2.$invalid  }">
-								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_2" placeholder="*cep" id="cep_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.cep_hospede_2">
+								<input type="text" ng-blur="setAddressHospedesByCep($event, 2)" autocomplete="off" class="input-placeholder cep" name="cep_hospede_2" placeholder="*cep" id="cep_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.cep_hospede_2">
 							</div>
 						</div>
 					</div>
@@ -885,7 +885,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_3.$invalid  }">
-								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_3" placeholder="*cep" id="cep_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.cep_hospede_3">
+								<input type="text" ng-blur="setAddressHospedesByCep($event, 3)" autocomplete="off" class="input-placeholder cep" name="cep_hospede_3" placeholder="*cep" id="cep_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.cep_hospede_3">
 							</div>
 						</div>
 					</div>
@@ -1019,7 +1019,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_4.$invalid  }">
-								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_4" placeholder="*cep" id="cep_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.cep_hospede_4">
+								<input type="text" ng-blur="setAddressHospedesByCep($event, 4)" autocomplete="off" class="input-placeholder cep" name="cep_hospede_4" placeholder="*cep" id="cep_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.cep_hospede_4">
 							</div>
 						</div>
 					</div>
