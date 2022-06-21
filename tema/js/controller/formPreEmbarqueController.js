@@ -440,9 +440,9 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
     $scope.setAddressByCep = function(cepEvent, address_scope, city_scope, uf_scope){
 
         $scope.getCep(cepEvent.target.value).then(function(r){
-            address_scope = '', 
-            city_scope = '', 
-            uf_scope = '';
+            address_scope = r.logradouro, 
+            city_scope = r.localidade, 
+            uf_scope = r.uf;
 
         }).catch((error) => {
             address_scope = '', city_scope = '', uf_scope = '';
@@ -455,8 +455,7 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
     $scope.getCep = function ( cep ) {
         return new Promise( function ( resolve, reject ) {
             jQuery.ajax( {
-                type: "POST",
-                data: postData,
+                type: "GET",
                 dataType: "json",
                 url: `https://viacep.com.br/ws/${cep}json/`,
                 success: function ( r ) {
