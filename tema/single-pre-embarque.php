@@ -759,7 +759,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_2.$invalid || cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 ) }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_2" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_2" placeholder="*cpf" id="cpf_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2 && data.hospede.nacionalidade_hospede_2=='Brasil'" ng-model="data.hospede.cpf_hospede_2">
+						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_2" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_2" placeholder="{{ data.hospede.nacionalidade_hospede_2=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2 && data.hospede.nacionalidade_hospede_2=='Brasil'" ng-model="data.hospede.cpf_hospede_2">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 )">*Este CPF já foi utilizado</div>
 					</div>
@@ -892,7 +892,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_3.$invalid || cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )  }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_3" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_3" placeholder="*cpf" id="cpf_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3 && data.hospede.nacionalidade_hospede_3=='Brasil'" ng-model="data.hospede.cpf_hospede_3">
+						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_3" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_3" placeholder="{{ data.hospede.nacionalidade_hospede_3=='Brasil' ? '*cpf' : 'cpf'}}"  id="cpf_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3 && data.hospede.nacionalidade_hospede_3=='Brasil'" ng-model="data.hospede.cpf_hospede_3">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )">*Este CPF já foi utilizado</div>
 
@@ -1026,7 +1026,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_4.$invalid || cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 ) }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_4" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_4" placeholder="*cpf" id="cpf_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4 && data.hospede.nacionalidade_hospede_4=='Brasil'" ng-model="data.hospede.cpf_hospede_4">
+						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_4" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_4" placeholder="{{ data.hospede.nacionalidade_hospede_4=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4 && data.hospede.nacionalidade_hospede_4=='Brasil'" ng-model="data.hospede.cpf_hospede_4">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 )">*Este CPF já foi utilizado</div>
 
