@@ -415,16 +415,18 @@ get_header(); ?>
 		</div>
 
 		<div class="col-sm-6">
+			<div class="form-group" ng-class="{'has-error-disable' : my_form2.cep_contratante.$invalid  }">
+				<input type="text" ng-blur="setAddressContratanteByCep($event)" autocomplete="off" class="input-placeholder cep" name="cep_contratante" required="" placeholder="*cep" id="cep_contratante" ng-model="data.contratante.cep_contratante">
+			</div>
+		</div>
+
+		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.endereco_contratante.$invalid  }">
 				<input type="text" autocomplete="off" class="input-placeholder" name="endereco_contratante" required="" placeholder="*endereço" id="endereco_contratante" ng-model="data.contratante.endereco_contratante">
 			</div>
 		</div>
 
-		<div class="col-sm-6">
-			<div class="form-group" ng-class="{'has-error-disable' : my_form2.cidade_contratante.$invalid  }">
-				<input type="text" autocomplete="off" class="input-placeholder" name="cidade_contratante" required="" placeholder="*cidade" id="cidade_contratante" ng-model="data.contratante.cidade_contratante">
-			</div>
-		</div>
+
 
 		<div class="col-sm-6">
 			<div class="row">
@@ -436,8 +438,8 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="col-sm-9">
-					<div class="form-group" ng-class="{'has-error-disable' : my_form2.cep_contratante.$invalid  }">
-						<input type="text" ng-blur="setAddressContratanteByCep($event)" autocomplete="off" class="input-placeholder cep" name="cep_contratante" required="" placeholder="*cep" id="cep_contratante" ng-model="data.contratante.cep_contratante">
+					<div class="form-group" ng-class="{'has-error-disable' : my_form2.cidade_contratante.$invalid  }">
+						<input type="text" autocomplete="off" class="input-placeholder" name="cidade_contratante" required="" placeholder="*cidade" id="cidade_contratante" ng-model="data.contratante.cidade_contratante">
 					</div>
 				</div>
 			</div>
@@ -893,7 +895,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_3.$invalid || cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )  }">
-						<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_hospede_3" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_3" placeholder="{{ data.hospede.nacionalidade_hospede_3=='Brasil' ? '*cpf' : 'cpf'}}"  id="cpf_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3 && data.hospede.nacionalidade_hospede_3=='Brasil'" ng-model="data.hospede.cpf_hospede_3">
+						<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_hospede_3" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_3" placeholder="{{ data.hospede.nacionalidade_hospede_3=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3 && data.hospede.nacionalidade_hospede_3=='Brasil'" ng-model="data.hospede.cpf_hospede_3">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )">*Este CPF já foi utilizado</div>
 
@@ -1165,11 +1167,11 @@ get_header(); ?>
 				<div class="col-sm-6 mt-20 text-right">
 
 					<button type="button" class="botao1 btn text-uppercase" ng-click="toMenu(3, true)">
-					 <i class="fa fa-arrow-left"></i> VOLTAR
+						<i class="fa fa-arrow-left"></i> VOLTAR
 					</button>
 
 					<button type="button" class="botao1 btn text-uppercase" data-disabledng-disabled="my_form4.$invalid" ng-click="myForm4.is_submitted=1; toMenu(5, my_form4.$valid)">
-						PRÓXIMO <i class="fa fa-arrow-right"></i> 
+						PRÓXIMO <i class="fa fa-arrow-right"></i>
 					</button>
 				</div>
 			</div>
