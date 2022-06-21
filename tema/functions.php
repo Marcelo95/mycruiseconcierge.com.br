@@ -397,8 +397,8 @@ function my_ajax_request()
 
     //$to = ["concierge3@pier1.com.br"]; //desabilitado
    
-   // $to = ["vendasereservas@pier1.com.br"]; // novo email
-    $to = ["marcelovieira1995@gmail.com"];
+    $to = ["vendasereservas@pier1.com.br"]; // novo email
+   // $to = ["marcelovieira1995@gmail.com"];
 
 
     $subject = "Contato via site - Pré-embarque";
