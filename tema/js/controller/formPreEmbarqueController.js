@@ -439,7 +439,7 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
 
     $scope.setAddressByCep = function(cepEvent, address_scope, city_scope, uf_scope){
 
-        $scope.getCep(cepEvent.value).then(function(r){
+        $scope.getCep(cepEvent.target.value).then(function(r){
             address_scope = '', 
             city_scope = '', 
             uf_scope = '';
