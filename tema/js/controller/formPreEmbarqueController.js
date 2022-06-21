@@ -474,7 +474,8 @@ meuApp.directive( 'cpfValido', function () {
              scope.$watch(attrs.ngModel, function (value) {
             //scope.$watch( attrs.cpfValido, function ( value ) {
 
-            console.log("attrs.cpfNacionalidade ", attrs.cpfNacionalidade)
+            console.log("teste ", elem[0].form[attrs.idNacionalidade].value)
+            
 
             var valor = elem[0].value.replace( /[^0-9]/g, '' ).slice( 0, 11 );
 
