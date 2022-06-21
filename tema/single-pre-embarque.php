@@ -64,7 +64,7 @@ if (isset($_GET["format"]) || isset($_POST["format"])) {
 				"auths" => ["email"],
 				// "phone_number" => "",
 				//birthday => "1983-03-31",
-				"has_documentation" => true,
+				"has_documentation" => false,
 				"delivery" => "email" // "email"  o signatário receberá as notificações de confirmação de assinatura e de documento finalizado.
 			];
 
@@ -77,11 +77,12 @@ if (isset($_GET["format"]) || isset($_POST["format"])) {
 				$signer["email"] = $_POST["email"];
 			}
 
-			if (isset($_POST["cpf"])) {
+			if (isset($_POST["cpf"]) && isset($_POST["nacionalidade"]) && $_POST["nacionalidade"] == "Brasil") {
+				$signer["has_documentation"] = true;
 				$signer["documentation"] = $_POST["cpf"]; //CPF do signatário.
 			}
 
-			if (isset($_POST["birthday"])) {
+			if (isset($_POST["birthday"]) && $signer["has_documentation"] == true) {
 				$signer["birthday"] = $_POST["birthday"]; // "1983-03-31"
 			}
 

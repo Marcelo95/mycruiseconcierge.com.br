@@ -296,6 +296,7 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
         var formData = new FormData();
         formData.append( 'name', $scope.data.contratante["nome_do_contratante"] );
         formData.append( 'email', $scope.data.contratante["email_contratante"] );
+        formData.append( 'nacionalidade', $scope.data.contratante["nacionalidade_contratante"] );
         formData.append( 'cpf', $scope.data.contratante["cpf_contratante"] );
         formData.append( 'is_agente', $scope.data.cruzeiro["is_agente"] || 0 );
 
