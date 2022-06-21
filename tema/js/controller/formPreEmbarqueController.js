@@ -447,7 +447,7 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
         }).catch((error) => {
             address_scope = '', city_scope = '', uf_scope = '';
         }).finally(()=>{
-            $scope.$apply();
+            $scope.$applyAsync();
         });
     }
 
