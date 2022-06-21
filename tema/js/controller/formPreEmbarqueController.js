@@ -437,19 +437,32 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
     }
 
 
-    $scope.setAddressByCep = function(cepEvent, id_address, id_city, id_uf){
+    $scope.setAddressContratanteByCep = function(cepEvent){
 
-        let address = document.getElementById(id_address), 
-        city = document.getElementById(id_city), 
-        uf = document.getElementById(id_uf);
+        $scope.data.contratante.endereco_contratante = '';
+        $scope.data.contratante.cidade_contratante = '';
+        $scope.data.contratante.uf_contratante = '';
 
         $scope.getCep(cepEvent.target.value).then(function(r){
-            address.value = r.logradouro, 
-            city.value = r.localidade, 
-            uf.value = r.uf;
+            $scope.data.contratante.endereco_contratante = r.logradouro;
+            $scope.data.contratante.cidade_contratante = r.localidade;
+            $scope.data.contratante.uf_contratante = r.uf;
 
-        }).catch((error) => {
-            address.value = '', city.value  = '', uf.value = '';
+        }).finally(()=>{
+            $scope.$apply();
+        });
+    }
+
+    $scope.setAddressHospedesByCep = function(cepEvent, id_hospede){
+
+        $scope.data.hospede["endereco_hospede_" + id_hospede] = '';
+        $scope.data.hospede["cidade_hospede_" + id_hospede] = '';
+        $scope.data.hospede["uf_hospede_" + id_hospede] = '';
+
+        $scope.getCep(cepEvent.target.value).then(function(r){
+            $scope.data.hospede["endereco_hospede_" + id_hospede] = r.logradouro;
+            $scope.data.hospede["cidade_hospede_" + id_hospede] = r.localidade;
+            $scope.data.hospede["uf_hospede_" + id_hospede] = r.uf;
 
         }).finally(()=>{
             $scope.$apply();
