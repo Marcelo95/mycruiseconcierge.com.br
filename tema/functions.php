@@ -152,6 +152,8 @@ function query($num, $table_name, $date_init, $date_fim, $id = '')
   DADOS.`vai_celebrar_data_especial_abordo_observacao` as 'VAI CELEBRAR DATA ESPECIAL ABORDO OBSERVAÇÃO',
   (select if( DADOS.`aceite` , 'SIM', 'NÃO')) as 'ACEITE',
 
+  DADOS.`date_created` as 'DATA DE CRIAÇÃO',
+
   (SELECT CONCAT('<a target=\"_blank\" href=\"', 'http://mycruiseconcierge.com.br/pre-embarque/aqua-expedition/?format=json&action=getDocs&key=' , ( SELECT DADOS.`document_key` ) , '\">', 'VISUALIZAR' ,'</a>')) as 'DOCUMENTO DOCKSIGN'
 
   FROM " . $table_name . " as DADOS ###;";
