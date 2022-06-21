@@ -426,7 +426,20 @@ get_header(); ?>
 			</div>
 		</div>
 
-
+		<div class="col-sm-6">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group" ng-class="{'has-error-disable' : my_form2.numero_do_endereco_contratante.$invalid  }">
+						<input type="text" autocomplete="off" class="input-placeholder" name="numero_do_endereco_contratante" placeholder="número" id="numero_do_endereco_contratante" ng-model="data.contratante.numero_do_endereco_contratante">
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group" ng-class="{'has-error-disable' : my_form2.complemento_contratante.$invalid  }">
+						<input type="text" autocomplete="off" class="input-placeholder" name="complemento_contratante" placeholder="complemento" id="complemento_contratante" ng-model="data.contratante.complemento_contratante">
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="col-sm-6">
 			<div class="row">
