@@ -474,19 +474,13 @@ meuApp.directive( 'cpfValido', function () {
              scope.$watch(attrs.ngModel, function (value) {
             //scope.$watch( attrs.cpfValido, function ( value ) {
 
-                if ( value == "Brasil" ) {
-                    var valor = elem[0].value.replace( /[^0-9]/g, '' ).slice( 0, 11 );
+            console.log("attrs.cpf_nacionalidade ", attrs.cpf_nacionalidade)
 
-                    // console.log("cpf test", valor, testaCPF(valor))
+            var valor = elem[0].value.replace( /[^0-9]/g, '' ).slice( 0, 11 );
 
-                    ctrl.$setValidity( 'cpfValido', testaCPF( valor ) );
-                }
-                else {
-                    //ctrl.$setValidity( 'cpfValido', true );
-                    ctrl.$setPristine();
-                    ctrl.$setUntouched();
-                }
+            // console.log("cpf test", valor, testaCPF(valor))
 
+            ctrl.$setValidity( 'cpfValido', testaCPF( valor ) );
 
 
             } );
