@@ -185,9 +185,6 @@ function query_to_email($num, $table_name, $date_init, $date_fim, $id = '')
 
   DADOS.`nome_do_contratante` as '2 - NOME DO CONTRATANTE',
   DADOS.`endereco_contratante` as '2 - ENDEREÇO CONTRATANTE',
-  DADOS.`numero_do_endereco_contratante` as '2 - NÚMERO DE ENDEREÇO CONTRATANTE',
-  DADOS.`complemento_contratante` as '2 - COMPLEMENTO CONTRATANTE',
-
   DADOS.`cidade_contratante` as '2 - CIDADE CONTRATANTE',
   DADOS.`cep_contratante` as '2 - CEP CONTRATANTE',
   DADOS.`email_contratante` as '2 - EMAIL CONTRATANTE',
@@ -214,11 +211,7 @@ function query_to_email($num, $table_name, $date_init, $date_fim, $id = '')
   DADOS.`local_emissao_hospede_1` as '3 - LOCAL EMISSÃO HÓSPEDE 1',
   DADOS.`data_expedicao_hospede_1` as '3 - DATA EXPEDICÃO HÓSPEDE 1',
   DADOS.`data_validade_hospede_1` as '3 - DATA VALIDADE HÓSPEDE 1',
-
   DADOS.`endereco_hospede_1` as '3 - ENDEREÇO HÓSPEDE 1',
-  DADOS.`numero_do_endereco_hospede_1` as '3 - NÚMERO DE ENDEREÇO HÓSPEDE 1',
-  DADOS.`complemento_hospede_1` as '3 - COMPLEMENTO HÓSPEDE 1',
-
   DADOS.`cidade_hospede_1` as '3 - CIDADE HÓSPEDE 1',
   DADOS.`cep_hospede_1` as '3 - CEP HÓSPEDE 1',
   DADOS.`uf_hospede_1` as '3 - UF HÓSPEDE 1',
@@ -238,10 +231,6 @@ function query_to_email($num, $table_name, $date_init, $date_fim, $id = '')
   DADOS.`data_expedicao_hospede_2` as '4 - DATA EXPEDICÃO HÓSPEDE 2',
   DADOS.`data_validade_hospede_2` as '4 - DATA VALIDADE HÓSPEDE 2',
   DADOS.`endereco_hospede_2` as '4 - ENDEREÇO HÓSPEDE 2',
-
-  DADOS.`numero_do_endereco_hospede_2` as '4 - NÚMERO DE ENDEREÇO HÓSPEDE 2',
-  DADOS.`complemento_hospede_2` as '4 - COMPLEMENTO HÓSPEDE 2',
-
   DADOS.`cidade_hospede_2` as '4 - CIDADE HÓSPEDE 2',
   DADOS.`cep_hospede_2` as '4 - CEP HÓSPEDE 2',
   DADOS.`email_hospede_2` as '4 - EMAIL HÓSPEDE 2',
@@ -252,10 +241,6 @@ function query_to_email($num, $table_name, $date_init, $date_fim, $id = '')
 
   DADOS.`nome_do_hospede_3` as '5 - NOME HÓSPEDE 3',
   DADOS.`endereco_hospede_3` as '5 - ENDEREÇO HÓSPEDE 3',
-
-  DADOS.`numero_do_endereco_hospede_3` as '5 - NÚMERO DE ENDEREÇO HÓSPEDE 3',
-  DADOS.`complemento_hospede_3` as '5 - COMPLEMENTO HÓSPEDE 3',
-
   DADOS.`cidade_hospede_3` as '5 - CIDADE HÓSPEDE 3',
   DADOS.`cep_hospede_3` as '5 - CEP HÓSPEDE 3',
   DADOS.`email_hospede_3` as '5 - EMAIL HÓSPEDE 3',
@@ -281,10 +266,6 @@ function query_to_email($num, $table_name, $date_init, $date_fim, $id = '')
   DADOS.`data_expedicao_hospede_4` as '6 - DATA EXPEDICÃO HÓSPEDE 4',
   DADOS.`data_validade_hospede_4` as '6 - DATA VALIDADE HÓSPEDE 4',
   DADOS.`endereco_hospede_4` as '6 - ENDEREÇO HÓSPEDE 4',
-
-  DADOS.`numero_do_endereco_hospede_4` as '6 - NÚMERO DE ENDEREÇO HÓSPEDE 4',
-  DADOS.`complemento_hospede_4` as '6 - COMPLEMENTO HÓSPEDE 4',
-
   DADOS.`cidade_hospede_4` as '6 - CIDADE HÓSPEDE 4',
   DADOS.`uf_hospede_4` as '6 - UF HÓSPEDE 4',
   DADOS.`cep_hospede_4` as '6 - CEP HÓSPEDE 4',
@@ -396,9 +377,8 @@ function my_ajax_request()
     }
 
     //$to = ["concierge3@pier1.com.br"]; //desabilitado
-   
-   // $to = ["vendasereservas@pier1.com.br"]; // novo email
-    $to = ["marcelovieira1995@gmail.com"];
+    $to = ["vendasereservas@pier1.com.br"]; // novo email
+    //$to = ["marcelovieira1995@gmail.com"];
 
 
     $subject = "Contato via site - Pré-embarque";
