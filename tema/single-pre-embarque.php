@@ -255,7 +255,7 @@ get_header(); ?>
 					<?php
 					} else {
 					?>
-						<input type="text" class="input-placeholder" required="" placeholder="*nome do navio" name="nome_navio" id="nome_navio" ng-model="data.cruzeiro.nome_navio">
+						<input type="text" autocomplete="off" class="input-placeholder" required="" placeholder="*nome do navio" name="nome_navio" id="nome_navio" ng-model="data.cruzeiro.nome_navio">
 
 					<?php
 					}
@@ -269,7 +269,7 @@ get_header(); ?>
 			</div>
 			<div class="col-sm-3">
 				<div class="form-group" ng-class="{'has-error-disable' : my_form.num_reserva.$invalid  }">
-					<input type="text" class="input-placeholder" required="" placeholder="*n° da reserva" name="num_reserva" id="num_reserva" ng-model="data.cruzeiro.num_reserva">
+					<input type="text" autocomplete="off" class="input-placeholder" required="" placeholder="*n° da reserva" name="num_reserva" id="num_reserva" ng-model="data.cruzeiro.num_reserva">
 				</div>
 
 			</div>
@@ -278,12 +278,12 @@ get_header(); ?>
 				<div class="row input-daterange">
 					<div class="col-sm-6">
 						<div class="form-group" ng-class="{'has-error-disable' : my_form.data_embarque.$invalid  }">
-							<input type="text" class="input-placeholder data-futura-embarque" ng-pattern='pattern_DATA' required="" placeholder="*data de embarque" name="data_embarque" id="data_embarque" ng-model="data.cruzeiro.data_embarque">
+							<input type="text" autocomplete="off" class="input-placeholder data-futura-embarque" ng-pattern='pattern_DATA' required="" placeholder="*data de embarque" name="data_embarque" id="data_embarque" ng-model="data.cruzeiro.data_embarque">
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="form-group" ng-class="{'has-error-disable' : my_form.data_desembarque.$invalid  }">
-							<input type="text" class="input-placeholder data-futura-desembarque" ng-pattern='pattern_DATA' required="" placeholder="*data de desembarque" name="data_desembarque" id="data_desembarque" ng-model="data.cruzeiro.data_desembarque">
+							<input type="text" autocomplete="off" class="input-placeholder data-futura-desembarque" ng-pattern='pattern_DATA' required="" placeholder="*data de desembarque" name="data_desembarque" id="data_desembarque" ng-model="data.cruzeiro.data_desembarque">
 						</div>
 					</div>
 				</div>
@@ -306,19 +306,19 @@ get_header(); ?>
 
 			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
 				<div class="form-group " ng-class="{'has-error-disable' : my_form.nome_agencia.$invalid  }">
-					<input type="text" class="input-placeholder" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome da agência" name="nome_agencia" id="nome_agencia" ng-model="data.cruzeiro.nome_agencia">
+					<input type="text" autocomplete="off" class="input-placeholder" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome da agência" name="nome_agencia" id="nome_agencia" ng-model="data.cruzeiro.nome_agencia">
 				</div>
 			</div>
 			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
 				<div class="form-group" ng-class="{'has-error-disable' : my_form.cnpj_agencia.$invalid  }">
-					<input type="text" class="input-placeholder cnpj" ng-required="data.cruzeiro.is_agente==1" placeholder="CNPJ da agência" name="cnpj_agencia" id="cnpj_agencia" ng-model="data.cruzeiro.cnpj_agencia">
+					<input type="text" autocomplete="off" class="input-placeholder cnpj" ng-required="data.cruzeiro.is_agente==1" placeholder="CNPJ da agência" name="cnpj_agencia" id="cnpj_agencia" ng-model="data.cruzeiro.cnpj_agencia">
 				</div>
 			</div>
 
 
 			<div class="col-sm-6" ng-show="data.cruzeiro.is_agente==1">
 				<div class="form-group" ng-class="{'has-error-disable' : my_form.nome_agente.$invalid  }">
-					<input type="text" class="input-placeholder" name="nome_agente" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome completo do agente de viagem" id="nome_agente" ng-model="data.cruzeiro.nome_agente">
+					<input type="text" autocomplete="off" class="input-placeholder" name="nome_agente" ng-required="data.cruzeiro.is_agente==1" placeholder="*nome completo do agente de viagem" id="nome_agente" ng-model="data.cruzeiro.nome_agente">
 				</div>
 			</div>
 
@@ -362,13 +362,13 @@ get_header(); ?>
 		</div>
 		<div class="col-sm-6 ">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.nome_do_contratante.$invalid  }">
-				<input type="text" class="input-placeholder" name="nome_do_contratante" required="" placeholder="*nome completo do contratante" id="nome_do_contratante" ng-model="data.contratante.nome_do_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_contratante" required="" placeholder="*nome completo do contratante" id="nome_do_contratante" ng-model="data.contratante.nome_do_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.data_nascimento_contratante.$invalid  }">
-				<input type="text" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_contratante" required="" placeholder="*data de nascimento (+18 anos)" id="data_nascimento_contratante" ng-model="data.contratante.data_nascimento_contratante">
+				<input type="text" autocomplete="off" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_contratante" required="" placeholder="*data de nascimento (+18 anos)" id="data_nascimento_contratante" ng-model="data.contratante.data_nascimento_contratante">
 				<div style="color: red; font-size: 12px;" ng-show="data.contratante.data_nascimento_contratante && !isMaior(data.contratante.data_nascimento_contratante)">*Precisa ser maior que 18 anos.</div>
 
 			</div>
@@ -385,44 +385,44 @@ get_header(); ?>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.local_nascimento_contratante.$invalid  }">
-				<input type="text" class="input-placeholder" name="local_nascimento_contratante" required="" placeholder="*local de nascimento" id="local_nascimento_contratante" ng-model="data.contratante.local_nascimento_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder" name="local_nascimento_contratante" required="" placeholder="*local de nascimento" id="local_nascimento_contratante" ng-model="data.contratante.local_nascimento_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.numero_passaporte_contratante.$invalid  }">
-				<input type="text" class="input-placeholder" name="numero_passaporte_contratante" required="" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_contratante" ng-model="data.contratante.numero_passaporte_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder" name="numero_passaporte_contratante" required="" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_contratante" ng-model="data.contratante.numero_passaporte_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.local_emissao_contratante.$invalid  }">
-				<input type="text" class="input-placeholder" name="local_emissao_contratante" required="" placeholder="*local de emissão" id="local_emissao_contratante" ng-model="data.contratante.local_emissao_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder" name="local_emissao_contratante" required="" placeholder="*local de emissão" id="local_emissao_contratante" ng-model="data.contratante.local_emissao_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.data_expedicao_contratante.$invalid  }">
-				<input type="text" class="input-placeholder data-passada" ng-pattern='pattern_DATA' name="data_expedicao_contratante" required="" placeholder="*data de expedição" id="data_expedicao_contratante" ng-model="data.contratante.data_expedicao_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder data-passada" ng-pattern='pattern_DATA' name="data_expedicao_contratante" required="" placeholder="*data de expedição" id="data_expedicao_contratante" ng-model="data.contratante.data_expedicao_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-forced' : my_form2.data_validade_contratante.$invalid && data.contratante.data_validade_contratante || data.contratante.data_validade_contratante && !isDataDeEmbarqueValid(data.contratante.data_validade_contratante) }">
-				<input type="text" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_contratante" required="" placeholder="*data de validade" id="data_validade_contratante" ng-model="data.contratante.data_validade_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_contratante" required="" placeholder="*data de validade" id="data_validade_contratante" ng-model="data.contratante.data_validade_contratante">
 				<div style="color: red; font-size: 12px;" ng-show="data.contratante.data_validade_contratante && !isDataDeEmbarqueValid(data.contratante.data_validade_contratante)">*A data de validade do passaporte não pode ser inferior a 6 meses da data de desembarque</div>
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.endereco_contratante.$invalid  }">
-				<input type="text" class="input-placeholder" name="endereco_contratante" required="" placeholder="*endereço" id="endereco_contratante" ng-model="data.contratante.endereco_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder" name="endereco_contratante" required="" placeholder="*endereço" id="endereco_contratante" ng-model="data.contratante.endereco_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.cidade_contratante.$invalid  }">
-				<input type="text" class="input-placeholder" name="cidade_contratante" required="" placeholder="*cidade" id="cidade_contratante" ng-model="data.contratante.cidade_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder" name="cidade_contratante" required="" placeholder="*cidade" id="cidade_contratante" ng-model="data.contratante.cidade_contratante">
 			</div>
 		</div>
 
@@ -437,7 +437,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-9">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form2.cep_contratante.$invalid  }">
-						<input type="text" class="input-placeholder cep" name="cep_contratante" required="" placeholder="*cep" id="cep_contratante" ng-model="data.contratante.cep_contratante">
+						<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_contratante" required="" placeholder="*cep" id="cep_contratante" ng-model="data.contratante.cep_contratante">
 					</div>
 				</div>
 			</div>
@@ -445,7 +445,7 @@ get_header(); ?>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.cpf_contratante.$invalid || cpfExist(data.contratante.cpf_contratante, 'cpf_contratante', 1 )  }">
-				<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_contratante" class="input-placeholder cpf" ng-class="{'cpf-invalid' : cpfExist(data.contratante.cpf_contratante, 'cpf_contratante', 1 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_contratante" ng-required="data.contratante.nacionalidade_contratante=='Brasil'" placeholder="{{ data.contratante.nacionalidade_contratante=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_contratante" ng-model="data.contratante.cpf_contratante">
+				<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_contratante" class="input-placeholder cpf" ng-class="{'cpf-invalid' : cpfExist(data.contratante.cpf_contratante, 'cpf_contratante', 1 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_contratante" ng-required="data.contratante.nacionalidade_contratante=='Brasil'" placeholder="{{ data.contratante.nacionalidade_contratante=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_contratante" ng-model="data.contratante.cpf_contratante">
 
 				<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.contratante.cpf_contratante, 'cpf_contratante', 1 )">*Este CPF já foi utilizado</div>
 
@@ -460,19 +460,19 @@ get_header(); ?>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.tel_residencial_contratante.$invalid  }">
-				<input type="text" class="input-placeholder tel" name="tel_residencial_contratante" placeholder="tel residencial" id="tel_residencial_contratante" ng-model="data.contratante.tel_residencial_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_contratante" placeholder="tel residencial" id="tel_residencial_contratante" ng-model="data.contratante.tel_residencial_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.tel_comercial_contratante.$invalid  }">
-				<input type="text" class="input-placeholder tel" name="tel_comercial_contratante" placeholder="tel comercial" id="tel_comercial_contratante" ng-model="data.contratante.tel_comercial_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_comercial_contratante" placeholder="tel comercial" id="tel_comercial_contratante" ng-model="data.contratante.tel_comercial_contratante">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.tel_celular_contratante.$invalid  }">
-				<input type="text" class="input-placeholder tel" name="tel_celular_contratante" required="" placeholder="*tel celular" id="tel_celular_contratante" ng-model="data.contratante.tel_celular_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_celular_contratante" required="" placeholder="*tel celular" id="tel_celular_contratante" ng-model="data.contratante.tel_celular_contratante">
 			</div>
 		</div>
 
@@ -542,13 +542,13 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 ">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.nome_do_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder" name="nome_do_hospede_1" placeholder="*nome completo do contratante" id="nome_do_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.nome_do_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_hospede_1" placeholder="*nome completo do contratante" id="nome_do_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.nome_do_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_nascimento_hospede_1.$invalid  }">
-						<input type="text" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_1" placeholder="*data de nascimento" id="data_nascimento_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.data_nascimento_hospede_1">
+						<input type="text" autocomplete="off" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_1" placeholder="*data de nascimento" id="data_nascimento_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.data_nascimento_hospede_1">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_nascimento_hospede_1 && !isAdult(data.hospede.data_nascimento_hospede_1)">*Não pode ter menos que 1 ano na data da viagem</div>
 
 					</div>
@@ -565,45 +565,45 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_nascimento_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_nascimento_hospede_1" placeholder="*local de nascimento" id="local_nascimento_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.local_nascimento_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_nascimento_hospede_1" placeholder="*local de nascimento" id="local_nascimento_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.local_nascimento_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.numero_passaporte_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder" name="numero_passaporte_hospede_1" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.numero_passaporte_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="numero_passaporte_hospede_1" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.numero_passaporte_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_emissao_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_emissao_hospede_1" placeholder="*local de emissão" id="local_emissao_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.local_emissao_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_emissao_hospede_1" placeholder="*local de emissão" id="local_emissao_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.local_emissao_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_expedicao_hospede_1.$invalid  }">
-						<input type="text" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_1" placeholder="*data de expedição" id="data_expedicao_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.data_expedicao_hospede_1">
+						<input type="text" autocomplete="off" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_1" placeholder="*data de expedição" id="data_expedicao_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.data_expedicao_hospede_1">
 
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-forced' : my_form3.data_validade_hospede_1.$invalid && data.hospede.data_validade_hospede_1|| data.hospede.data_validade_hospede_1 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_1) }">
-						<input type="text" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_1" placeholder="*data de validade" id="data_validade_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.data_validade_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_1" placeholder="*data de validade" id="data_validade_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.data_validade_hospede_1">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_validade_hospede_1 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_1)">*A data de validade do passaporte não pode ser inferior a 6 meses da data de desembarque</div>
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.endereco_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder" name="endereco_hospede_1" placeholder="*endereço" id="endereco_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.endereco_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="endereco_hospede_1" placeholder="*endereço" id="endereco_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.endereco_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cidade_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder" name="cidade_hospede_1" placeholder="*cidade" id="cidade_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.cidade_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="cidade_hospede_1" placeholder="*cidade" id="cidade_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.cidade_hospede_1">
 					</div>
 				</div>
 
@@ -618,7 +618,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_1.$invalid  }">
-								<input type="text" class="input-placeholder cep" name="cep_hospede_1" placeholder="*cep" id="cep_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.cep_hospede_1">
+								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_1" placeholder="*cep" id="cep_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.cep_hospede_1">
 							</div>
 						</div>
 					</div>
@@ -626,7 +626,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_1.$invalid || cpfExist(data.hospede.cpf_hospede_1, 'cpf_hospede_1', data.hospede.is_hospede_1 ) }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_1" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_1, 'cpf_hospede_1', data.hospede.is_hospede_1 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_1" placeholder="{{ data.hospede.nacionalidade_hospede_1=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1 && data.hospede.nacionalidade_hospede_1=='Brasil'" ng-model="data.hospede.cpf_hospede_1">
+						<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_hospede_1" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_1, 'cpf_hospede_1', data.hospede.is_hospede_1 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_1" placeholder="{{ data.hospede.nacionalidade_hospede_1=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1 && data.hospede.nacionalidade_hospede_1=='Brasil'" ng-model="data.hospede.cpf_hospede_1">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_1, 'cpf_hospede_1', data.hospede.is_hospede_1 )">*Este CPF já foi utilizado</div>
 
@@ -641,19 +641,19 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_residencial_hospede_1" placeholder="tel residencial" id="tel_residencial_hospede_1" ng-model="data.hospede.tel_residencial_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_1" placeholder="tel residencial" id="tel_residencial_hospede_1" ng-model="data.hospede.tel_residencial_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_comercial_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_comercial_hospede_1" placeholder="tel comercial" id="tel_comercial_hospede_1" ng-model="data.hospede.tel_comercial_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_comercial_hospede_1" placeholder="tel comercial" id="tel_comercial_hospede_1" ng-model="data.hospede.tel_comercial_hospede_1">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_celular_hospede_1.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_celular_hospede_1" placeholder="*tel celular" id="tel_celular_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.tel_celular_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_celular_hospede_1" placeholder="*tel celular" id="tel_celular_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.tel_celular_hospede_1">
 					</div>
 				</div>
 
@@ -676,13 +676,13 @@ get_header(); ?>
 
 				<div class="col-sm-6 ">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.nome_do_hospede_2.$invalid  }" ng-init="is_hospede_2=0">
-						<input type="text" class="input-placeholder" name="nome_do_hospede_2" placeholder="*nome completo do hóspede" id="nome_do_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.nome_do_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_hospede_2" placeholder="*nome completo do hóspede" id="nome_do_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.nome_do_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_nascimento_hospede_2.$invalid  }">
-						<input type="text" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_2" placeholder="*data de nascimento" id="data_nascimento_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.data_nascimento_hospede_2">
+						<input type="text" autocomplete="off" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_2" placeholder="*data de nascimento" id="data_nascimento_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.data_nascimento_hospede_2">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_nascimento_hospede_2 && !isAdult(data.hospede.data_nascimento_hospede_2)">*Não pode ter menos que 1 ano na data da viagem</div>
 
 					</div>
@@ -700,44 +700,44 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_nascimento_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_nascimento_hospede_2" placeholder="*local de nascimento" id="local_nascimento_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.local_nascimento_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_nascimento_hospede_2" placeholder="*local de nascimento" id="local_nascimento_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.local_nascimento_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.numero_passaporte_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder" name="numero_passaporte_hospede_2" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.numero_passaporte_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder" name="numero_passaporte_hospede_2" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.numero_passaporte_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_emissao_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_emissao_hospede_2" placeholder="*local de emissão" id="local_emissao_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.local_emissao_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_emissao_hospede_2" placeholder="*local de emissão" id="local_emissao_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.local_emissao_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_expedicao_hospede_2.$invalid  }">
-						<input type="text" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_2" placeholder="*data de expedição" id="data_expedicao_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.data_expedicao_hospede_2">
+						<input type="text" autocomplete="off" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_2" placeholder="*data de expedição" id="data_expedicao_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.data_expedicao_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-forced' : my_form3.data_validade_hospede_2.$invalid && data.hospede.data_validade_hospede_2 || data.hospede.data_validade_hospede_2 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_2) }">
-						<input type="text" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_2" placeholder="*data de validade" id="data_validade_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.data_validade_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_2" placeholder="*data de validade" id="data_validade_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.data_validade_hospede_2">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_validade_hospede_2 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_2)">*A data de validade do passaporte não pode ser inferior a 6 meses da data de desembarque</div>
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.endereco_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder" name="endereco_hospede_2" placeholder="*endereço" id="endereco_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.endereco_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder" name="endereco_hospede_2" placeholder="*endereço" id="endereco_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.endereco_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cidade_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder" name="cidade_hospede_2" placeholder="*cidade" id="cidade_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.cidade_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder" name="cidade_hospede_2" placeholder="*cidade" id="cidade_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.cidade_hospede_2">
 					</div>
 				</div>
 
@@ -752,7 +752,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_2.$invalid  }">
-								<input type="text" class="input-placeholder cep" name="cep_hospede_2" placeholder="*cep" id="cep_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.cep_hospede_2">
+								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_2" placeholder="*cep" id="cep_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.cep_hospede_2">
 							</div>
 						</div>
 					</div>
@@ -760,7 +760,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_2.$invalid || cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 ) }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_2" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_2" placeholder="{{ data.hospede.nacionalidade_hospede_2=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2 && data.hospede.nacionalidade_hospede_2=='Brasil'" ng-model="data.hospede.cpf_hospede_2">
+						<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_hospede_2" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_2" placeholder="{{ data.hospede.nacionalidade_hospede_2=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2 && data.hospede.nacionalidade_hospede_2=='Brasil'" ng-model="data.hospede.cpf_hospede_2">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_2, 'cpf_hospede_2', 0 )">*Este CPF já foi utilizado</div>
 					</div>
@@ -774,20 +774,20 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_residencial_hospede_2" placeholder="tel residencial" id="tel_residencial_hospede_2" ng-model="data.hospede.tel_residencial_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_2" placeholder="tel residencial" id="tel_residencial_hospede_2" ng-model="data.hospede.tel_residencial_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_comercial_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_comercial_hospede_2" placeholder="tel comercial" id="tel_comercial_hospede_2" ng-model="data.hospede.tel_comercial_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_comercial_hospede_2" placeholder="tel comercial" id="tel_comercial_hospede_2" ng-model="data.hospede.tel_comercial_hospede_2">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_celular_hospede_2.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_celular_hospede_2" placeholder="*tel celular" id="tel_celular_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.tel_celular_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_celular_hospede_2" placeholder="*tel celular" id="tel_celular_hospede_2" ng-required="data.hospede.quantidade_hospedes>=2" ng-model="data.hospede.tel_celular_hospede_2">
 					</div>
 				</div>
 
@@ -810,13 +810,13 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 ">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.nome_do_hospede_3.$invalid  }" ng-init="is_hospede_3=0">
-						<input type="text" class="input-placeholder" name="nome_do_hospede_3" placeholder="*nome completo do hóspede" id="nome_do_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.nome_do_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_hospede_3" placeholder="*nome completo do hóspede" id="nome_do_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.nome_do_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_nascimento_hospede_3.$invalid  }">
-						<input type="text" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_3" placeholder="*data de nascimento" id="data_nascimento_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.data_nascimento_hospede_3">
+						<input type="text" autocomplete="off" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_3" placeholder="*data de nascimento" id="data_nascimento_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.data_nascimento_hospede_3">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_nascimento_hospede_3 && !isAdult(data.hospede.data_nascimento_hospede_3)">*Não pode ter menos que 1 ano na data da viagem</div>
 
 					</div>
@@ -833,44 +833,44 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_nascimento_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_nascimento_hospede_3" placeholder="*local de nascimento" id="local_nascimento_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.local_nascimento_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_nascimento_hospede_3" placeholder="*local de nascimento" id="local_nascimento_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.local_nascimento_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.numero_passaporte_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder" name="numero_passaporte_hospede_3" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.numero_passaporte_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder" name="numero_passaporte_hospede_3" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.numero_passaporte_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_emissao_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_emissao_hospede_3" placeholder="*local de emissão" id="local_emissao_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.local_emissao_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_emissao_hospede_3" placeholder="*local de emissão" id="local_emissao_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.local_emissao_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_expedicao_hospede_3.$invalid  }">
-						<input type="text" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_3" placeholder="*data de expedição" id="data_expedicao_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.data_expedicao_hospede_3">
+						<input type="text" autocomplete="off" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_3" placeholder="*data de expedição" id="data_expedicao_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.data_expedicao_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-forced' : my_form3.data_validade_hospede_3.$invalid && data.hospede.data_validade_hospede_3 || data.hospede.data_validade_hospede_3 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_3)  }">
-						<input type="text" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_3" placeholder="*data de validade" id="data_validade_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.data_validade_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_3" placeholder="*data de validade" id="data_validade_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.data_validade_hospede_3">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_validade_hospede_3 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_3)">*A data de validade do passaporte não pode ser inferior a 6 meses da data de desembarque</div>
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.endereco_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder" name="endereco_hospede_3" placeholder="*endereço" id="endereco_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.endereco_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder" name="endereco_hospede_3" placeholder="*endereço" id="endereco_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.endereco_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cidade_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder" name="cidade_hospede_3" placeholder="*cidade" id="cidade_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.cidade_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder" name="cidade_hospede_3" placeholder="*cidade" id="cidade_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.cidade_hospede_3">
 					</div>
 				</div>
 
@@ -885,7 +885,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_3.$invalid  }">
-								<input type="text" class="input-placeholder cep" name="cep_hospede_3" placeholder="*cep" id="cep_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.cep_hospede_3">
+								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_3" placeholder="*cep" id="cep_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.cep_hospede_3">
 							</div>
 						</div>
 					</div>
@@ -893,7 +893,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_3.$invalid || cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )  }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_3" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_3" placeholder="{{ data.hospede.nacionalidade_hospede_3=='Brasil' ? '*cpf' : 'cpf'}}"  id="cpf_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3 && data.hospede.nacionalidade_hospede_3=='Brasil'" ng-model="data.hospede.cpf_hospede_3">
+						<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_hospede_3" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_3" placeholder="{{ data.hospede.nacionalidade_hospede_3=='Brasil' ? '*cpf' : 'cpf'}}"  id="cpf_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3 && data.hospede.nacionalidade_hospede_3=='Brasil'" ng-model="data.hospede.cpf_hospede_3">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_3, 'cpf_hospede_3', 0 )">*Este CPF já foi utilizado</div>
 
@@ -908,20 +908,20 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_residencial_hospede_3" placeholder="tel residencial" id="tel_residencial_hospede_3" ng-model="data.hospede.tel_residencial_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_3" placeholder="tel residencial" id="tel_residencial_hospede_3" ng-model="data.hospede.tel_residencial_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_comercial_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_comercial_hospede_3" placeholder="tel comercial" id="tel_comercial_hospede_3" ng-model="data.hospede.tel_comercial_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_comercial_hospede_3" placeholder="tel comercial" id="tel_comercial_hospede_3" ng-model="data.hospede.tel_comercial_hospede_3">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_celular_hospede_3.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_celular_hospede_3" placeholder="*tel celular" id="tel_celular_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.tel_celular_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_celular_hospede_3" placeholder="*tel celular" id="tel_celular_hospede_3" ng-required="data.hospede.quantidade_hospedes>=3" ng-model="data.hospede.tel_celular_hospede_3">
 					</div>
 				</div>
 
@@ -943,13 +943,13 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 ">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.nome_do_hospede_4.$invalid  }" ng-init="is_hospede_4=0">
-						<input type="text" class="input-placeholder" name="nome_do_hospede_4" placeholder="*nome completo do hóspede" id="nome_do_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.nome_do_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_hospede_4" placeholder="*nome completo do hóspede" id="nome_do_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.nome_do_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_nascimento_hospede_4.$invalid  }">
-						<input type="text" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_4" placeholder="*data de nascimento" id="data_nascimento_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.data_nascimento_hospede_4">
+						<input type="text" autocomplete="off" class="data input-placeholder" ng-pattern='pattern_DATA' name="data_nascimento_hospede_4" placeholder="*data de nascimento" id="data_nascimento_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.data_nascimento_hospede_4">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_nascimento_hospede_4 && !isAdult(data.hospede.data_nascimento_hospede_4)">*Não pode ter menos que 1 ano na data da viagem</div>
 
 					</div>
@@ -966,31 +966,31 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_nascimento_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_nascimento_hospede_4" placeholder="*local de nascimento" id="local_nascimento_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.local_nascimento_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_nascimento_hospede_4" placeholder="*local de nascimento" id="local_nascimento_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.local_nascimento_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.numero_passaporte_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder" name="numero_passaporte_hospede_4" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.numero_passaporte_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder" name="numero_passaporte_hospede_4" placeholder="*nº passaporte com data validade acima de 6 meses" id="numero_passaporte_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.numero_passaporte_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.local_emissao_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder" name="local_emissao_hospede_4" placeholder="*local de emissão" id="local_emissao_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.local_emissao_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder" name="local_emissao_hospede_4" placeholder="*local de emissão" id="local_emissao_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.local_emissao_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.data_expedicao_hospede_4.$invalid  }">
-						<input type="text" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_4" placeholder="*data de expedição" id="data_expedicao_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.data_expedicao_hospede_4">
+						<input type="text" autocomplete="off" class="data-passada input-placeholder" ng-pattern='pattern_DATA' name="data_expedicao_hospede_4" placeholder="*data de expedição" id="data_expedicao_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.data_expedicao_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-forced' : my_form3.data_validade_hospede_4.$invalid && data.hospede.data_validade_hospede_4 || data.hospede.data_validade_hospede_4 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_4) }">
-						<input type="text" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_4" placeholder="*data de validade" id="data_validade_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.data_validade_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder data-futura" ng-pattern='pattern_DATA' name="data_validade_hospede_4" placeholder="*data de validade" id="data_validade_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.data_validade_hospede_4">
 						<div style="color: red; font-size: 12px;" ng-show="data.hospede.data_validade_hospede_4 && !isDataDeEmbarqueValid(data.hospede.data_validade_hospede_4)">*A data de validade do passaporte não pode ser inferior a 6 meses da data de desembarque</div>
 					</div>
 				</div>
@@ -998,13 +998,13 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.endereco_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder" name="endereco_hospede_4" placeholder="*endereço" id="endereco_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.endereco_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder" name="endereco_hospede_4" placeholder="*endereço" id="endereco_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.endereco_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cidade_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder" name="cidade_hospede_4" placeholder="*cidade" id="cidade_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.cidade_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder" name="cidade_hospede_4" placeholder="*cidade" id="cidade_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.cidade_hospede_4">
 					</div>
 				</div>
 
@@ -1019,7 +1019,7 @@ get_header(); ?>
 						</div>
 						<div class="col-sm-9">
 							<div class="form-group" ng-class="{'has-error-disable' : my_form3.cep_hospede_4.$invalid  }">
-								<input type="text" class="input-placeholder cep" name="cep_hospede_4" placeholder="*cep" id="cep_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.cep_hospede_4">
+								<input type="text" autocomplete="off" class="input-placeholder cep" name="cep_hospede_4" placeholder="*cep" id="cep_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.cep_hospede_4">
 							</div>
 						</div>
 					</div>
@@ -1027,7 +1027,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.cpf_hospede_4.$invalid || cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 ) }">
-						<input type="text" cpf-valido data-id_nacionalidade="nacionalidade_hospede_4" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_4" placeholder="{{ data.hospede.nacionalidade_hospede_4=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4 && data.hospede.nacionalidade_hospede_4=='Brasil'" ng-model="data.hospede.cpf_hospede_4">
+						<input type="text" autocomplete="off" cpf-valido data-id_nacionalidade="nacionalidade_hospede_4" class="cpf input-placeholder" ng-class="{'cpf-invalid' : cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 )}" data-disable-ng-pattern='pattern_CPF' name="cpf_hospede_4" placeholder="{{ data.hospede.nacionalidade_hospede_4=='Brasil' ? '*cpf' : 'cpf'}}" id="cpf_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4 && data.hospede.nacionalidade_hospede_4=='Brasil'" ng-model="data.hospede.cpf_hospede_4">
 
 						<div style="color: red; font-size: 12px;" ng-show="cpfExist(data.hospede.cpf_hospede_4, 'cpf_hospede_4', 0 )">*Este CPF já foi utilizado</div>
 
@@ -1042,19 +1042,19 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_residencial_hospede_4" placeholder="tel residencial" id="tel_residencial_hospede_4" ng-model="data.hospede.tel_residencial_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_4" placeholder="tel residencial" id="tel_residencial_hospede_4" ng-model="data.hospede.tel_residencial_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_comercial_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_comercial_hospede_4" placeholder="tel comercial" id="tel_comercial_hospede_4" ng-model="data.hospede.tel_comercial_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_comercial_hospede_4" placeholder="tel comercial" id="tel_comercial_hospede_4" ng-model="data.hospede.tel_comercial_hospede_4">
 					</div>
 				</div>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_celular_hospede_4.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_celular_hospede_4" placeholder="*tel celular" id="tel_celular_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.tel_celular_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_celular_hospede_4" placeholder="*tel celular" id="tel_celular_hospede_4" ng-required="data.hospede.quantidade_hospedes>=4" ng-model="data.hospede.tel_celular_hospede_4">
 					</div>
 				</div>
 
@@ -1116,19 +1116,19 @@ get_header(); ?>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form4.nome_completo_emergencia.$invalid  }">
-				<input type="text" class="input-placeholder" name="nome_completo_emergencia" required="" placeholder="*nome completo" id="nome_completo_emergencia" ng-model="data.contato_emergencia.nome_completo_emergencia">
+				<input type="text" autocomplete="off" class="input-placeholder" name="nome_completo_emergencia" required="" placeholder="*nome completo" id="nome_completo_emergencia" ng-model="data.contato_emergencia.nome_completo_emergencia">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form4.endereco_contato_emergencia.$invalid  }">
-				<input type="text" class="input-placeholder" name="endereco_contato_emergencia" required="" placeholder="*endereço" id="endereco_contato_emergencia" ng-model="data.contato_emergencia.endereco_contato_emergencia">
+				<input type="text" autocomplete="off" class="input-placeholder" name="endereco_contato_emergencia" required="" placeholder="*endereço" id="endereco_contato_emergencia" ng-model="data.contato_emergencia.endereco_contato_emergencia">
 			</div>
 		</div>
 
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form4.cidade_contato_emergencia.$invalid  }">
-				<input type="text" class="input-placeholder" name="cidade_contato_emergencia" required="" placeholder="*cidade" id="cidade_contato_emergencia" ng-model="data.contato_emergencia.cidade_contato_emergencia">
+				<input type="text" autocomplete="off" class="input-placeholder" name="cidade_contato_emergencia" required="" placeholder="*cidade" id="cidade_contato_emergencia" ng-model="data.contato_emergencia.cidade_contato_emergencia">
 			</div>
 		</div>
 
@@ -1145,7 +1145,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-9">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form4.tel_contato_emergencia.$invalid  }">
-						<input type="text" class="input-placeholder tel" name="tel_contato_emergencia" required="" placeholder="*telefone" id="tel_contato_emergencia" ng-model="data.contato_emergencia.tel_contato_emergencia">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_contato_emergencia" required="" placeholder="*telefone" id="tel_contato_emergencia" ng-model="data.contato_emergencia.tel_contato_emergencia">
 					</div>
 				</div>
 			</div>
@@ -1203,7 +1203,7 @@ get_header(); ?>
 
 				<div class="col-sm-12" ng-show="data.solicitacao_especiais.cuidados_medicos==1">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form5.cuidados_medicos_observacao.$invalid  }">
-						<input type="text" name="cuidados_medicos_observacao" ng-required="data.solicitacao_especiais.cuidados_medicos" placeholder="*Medicamentos? Cadeiras de rodas? Aparelho respiratório? Etc..." id="cuidados_medicos_observacao" ng-model="data.solicitacao_especiais.cuidados_medicos_observacao">
+						<input type="text" autocomplete="off" name="cuidados_medicos_observacao" ng-required="data.solicitacao_especiais.cuidados_medicos" placeholder="*Medicamentos? Cadeiras de rodas? Aparelho respiratório? Etc..." id="cuidados_medicos_observacao" ng-model="data.solicitacao_especiais.cuidados_medicos_observacao">
 					</div>
 
 				</div>
@@ -1233,7 +1233,7 @@ get_header(); ?>
 				<div class="col-sm-12" ng-show="data.solicitacao_especiais.is_gestante==1">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form5.is_gestante_observacao.$invalid  }">
 						<label for="" class="mobile">Em qual semana da gestação a hóspede estará na data de desembarque?</label>
-						<input type="text" name="is_gestante_observacao" ng-required="data.solicitacao_especiais.is_gestante" placeholder="*Em qual semana da gestação a hóspede estará na data de desembarque?" id="is_gestante_observacao" ng-model="data.solicitacao_especiais.is_gestante_observacao">
+						<input type="text" autocomplete="off" name="is_gestante_observacao" ng-required="data.solicitacao_especiais.is_gestante" placeholder="*Em qual semana da gestação a hóspede estará na data de desembarque?" id="is_gestante_observacao" ng-model="data.solicitacao_especiais.is_gestante_observacao">
 					</div>
 
 				</div>
@@ -1263,7 +1263,7 @@ get_header(); ?>
 
 				<div class="col-sm-12" ng-show="data.solicitacao_especiais.tem_menor_de_um_ano==1">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form5.tem_menor_de_um_ano_observacao.$invalid  }">
-						<input type="text" name="tem_menor_de_um_ano_observacao" ng-required="data.solicitacao_especiais.tem_menor_de_um_ano" placeholder="*Por favor detalhar" id="tem_menor_de_um_ano_observacao" ng-model="data.solicitacao_especiais.tem_menor_de_um_ano_observacao">
+						<input type="text" autocomplete="off" name="tem_menor_de_um_ano_observacao" ng-required="data.solicitacao_especiais.tem_menor_de_um_ano" placeholder="*Por favor detalhar" id="tem_menor_de_um_ano_observacao" ng-model="data.solicitacao_especiais.tem_menor_de_um_ano_observacao">
 					</div>
 
 				</div>
@@ -1293,7 +1293,7 @@ get_header(); ?>
 
 				<div class="col-sm-12" ng-show="data.solicitacao_especiais.possui_restricao_alimentar==1">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form5.possui_restricao_alimentar_observacao.$invalid  }">
-						<input type="text" name="possui_restricao_alimentar_observacao" ng-required="data.solicitacao_especiais.possui_restricao_alimentar" placeholder="*Vegetariano? Intolerância a lactose? Glúten? Etc..." id="possui_restricao_alimentar_observacao" ng-model="data.solicitacao_especiais.possui_restricao_alimentar_observacao">
+						<input type="text" autocomplete="off" name="possui_restricao_alimentar_observacao" ng-required="data.solicitacao_especiais.possui_restricao_alimentar" placeholder="*Vegetariano? Intolerância a lactose? Glúten? Etc..." id="possui_restricao_alimentar_observacao" ng-model="data.solicitacao_especiais.possui_restricao_alimentar_observacao">
 					</div>
 
 				</div>
@@ -1324,7 +1324,7 @@ get_header(); ?>
 
 				<div class="col-sm-12" ng-show="data.solicitacao_especiais.vai_celebrar_data_especial_abordo==1">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form5.vai_celebrar_data_especial_abordo_observacao.$invalid  }">
-						<input type="text" name="vai_celebrar_data_especial_abordo_observacao" ng-required="data.solicitacao_especiais.vai_celebrar_data_especial_abordo" placeholder="*Aniversário? Bodas de Casamento? Lua de Mel? Etc..." id="vai_celebrar_data_especial_abordo_observacao" ng-model="data.solicitacao_especiais.vai_celebrar_data_especial_abordo_observacao">
+						<input type="text" autocomplete="off" name="vai_celebrar_data_especial_abordo_observacao" ng-required="data.solicitacao_especiais.vai_celebrar_data_especial_abordo" placeholder="*Aniversário? Bodas de Casamento? Lua de Mel? Etc..." id="vai_celebrar_data_especial_abordo_observacao" ng-model="data.solicitacao_especiais.vai_celebrar_data_especial_abordo_observacao">
 					</div>
 
 				</div>
