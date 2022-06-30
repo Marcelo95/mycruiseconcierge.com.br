@@ -68,7 +68,7 @@ meuApp.controller( "formPreEmbarqueController", function ( $window, $scope, $htt
             $scope.data.hospede["cpf_hospede_" + id] = angular.copy( $scope.data.contratante.cpf_contratante );
             $scope.data.hospede["email_hospede_" + id] = angular.copy( $scope.data.contratante.email_contratante );
             $scope.data.hospede["tel_residencial_hospede_" + id] = angular.copy( $scope.data.contratante.tel_residencial_contratante );
-            $scope.data.hospede["tel_comercial_hospede_" + id] = angular.copy( $scope.data.contratante.tel_comercial_contratante );
+            $scope.data.hospede["tel_comercial_hospede_" + id] = "";
             $scope.data.hospede["tel_celular_hospede_" + id] = angular.copy( $scope.data.contratante.tel_celular_contratante );
         }
 
