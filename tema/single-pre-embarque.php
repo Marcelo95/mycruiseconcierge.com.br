@@ -482,7 +482,7 @@ get_header(); ?>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group" ng-class="{'has-error-disable' : my_form2.tel_residencial_contratante.$invalid  }">
-				<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_contratante" placeholder="tel residencial" id="tel_residencial_contratante" ng-model="data.contratante.tel_residencial_contratante">
+				<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_contratante" placeholder="tel fixo" id="tel_residencial_contratante" ng-model="data.contratante.tel_residencial_contratante">
 			</div>
 		</div>
 
@@ -676,7 +676,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_1.$invalid  }">
-						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_1" placeholder="tel residencial" id="tel_residencial_hospede_1" ng-model="data.hospede.tel_residencial_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_1" placeholder="tel fixo" id="tel_residencial_hospede_1" ng-model="data.hospede.tel_residencial_hospede_1">
 					</div>
 				</div>
 
@@ -823,7 +823,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_2.$invalid  }">
-						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_2" placeholder="tel residencial" id="tel_residencial_hospede_2" ng-model="data.hospede.tel_residencial_hospede_2">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_2" placeholder="tel fixo" id="tel_residencial_hospede_2" ng-model="data.hospede.tel_residencial_hospede_2">
 					</div>
 				</div>
 
@@ -973,7 +973,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_3.$invalid  }">
-						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_3" placeholder="tel residencial" id="tel_residencial_hospede_3" ng-model="data.hospede.tel_residencial_hospede_3">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_3" placeholder="tel fixo" id="tel_residencial_hospede_3" ng-model="data.hospede.tel_residencial_hospede_3">
 					</div>
 				</div>
 	
@@ -1117,7 +1117,7 @@ get_header(); ?>
 
 				<div class="col-sm-6">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_4.$invalid  }">
-						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_4" placeholder="tel residencial" id="tel_residencial_hospede_4" ng-model="data.hospede.tel_residencial_hospede_4">
+						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_4" placeholder="tel fixo" id="tel_residencial_hospede_4" ng-model="data.hospede.tel_residencial_hospede_4">
 					</div>
 				</div>	
 
