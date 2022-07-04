@@ -976,7 +976,7 @@ get_header(); ?>
 						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_3" placeholder="tel fixo" id="tel_residencial_hospede_3" ng-model="data.hospede.tel_residencial_hospede_3">
 					</div>
 				</div>
-	
+
 
 			</div>
 
@@ -1119,7 +1119,7 @@ get_header(); ?>
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.tel_residencial_hospede_4.$invalid  }">
 						<input type="text" autocomplete="off" class="input-placeholder tel" name="tel_residencial_hospede_4" placeholder="tel fixo" id="tel_residencial_hospede_4" ng-model="data.hospede.tel_residencial_hospede_4">
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
@@ -1523,6 +1523,14 @@ get_header(); ?>
 				startDate: today
 			}).on('hide', function(e) {
 				if (jQuery(e.target).hasClass("data-futura-embarque")) {
+
+					jQuery(".data-futura-desembarque").datepicker("destroy")
+					jQuery(".data-futura-desembarque").datepicker({
+						language: "pt-BR",
+						autoclose: true,
+						startDate: jQuery(".data-futura-embarque").datepicker("getDate")
+					})
+
 					jQuery(".data-futura-desembarque").attr('tabindex', -1).focus();
 				}
 			});
