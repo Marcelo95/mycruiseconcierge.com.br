@@ -205,7 +205,7 @@ get_header(); ?>
 		</div>
 		<div class="col-sm-2 passos-item " ng-class="{'active' : menu >= 3, 'actual' : menu == 3 }" ng-click="toMenu(3, (my_form2.$valid && isDataDeEmbarqueValid(data.contratante.data_validade_contratante)))">
 			<div class="separator"></div>
-			<span>Hóspedes</span>
+			<span>Hóspede</span>
 			<i class="icon-checked" ng-show="my_form3.$valid"></i>
 		</div>
 		<div class="col-sm-2 passos-item " ng-class="{'active' : menu >= 4, 'actual' : menu == 4 }" ng-click="toMenu(4, (my_form3.$valid && isDataDeEmbarqueValid(data.hospede.data_validade_hospede_1) && data.hospede.quantidade_hospedes==1 || isDataDeEmbarqueValid(data.hospede.data_validade_hospede_2) && data.hospede.quantidade_hospedes==2 || isDataDeEmbarqueValid(data.hospede.data_validade_hospede_3) && data.hospede.quantidade_hospedes==3 || isDataDeEmbarqueValid(data.hospede.data_validade_hospede_4) && data.hospede.quantidade_hospedes==4 ))">
@@ -552,7 +552,7 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-6 ">
 					<div class="form-group" ng-class="{'has-error-disable' : my_form3.nome_do_hospede_1.$invalid  }">
-						<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_hospede_1" placeholder="*nome completo do contratante" id="nome_do_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.nome_do_hospede_1">
+						<input type="text" autocomplete="off" class="input-placeholder" name="nome_do_hospede_1" placeholder="*nome completo do hóspede" id="nome_do_hospede_1" ng-required="data.hospede.quantidade_hospedes>=1" ng-model="data.hospede.nome_do_hospede_1">
 					</div>
 				</div>
 
