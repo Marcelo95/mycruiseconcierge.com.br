@@ -19,7 +19,6 @@ function theme_enqueue_scripts()
       'ajax_url' => admin_url('admin-ajax.php')
     )
   );
-  
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
@@ -331,8 +330,9 @@ function query_to_email($num, $table_name, $date_init, $date_fim, $id = '')
   if ($num == 2) {
     return str_replace("###", "WHERE DADOS.`ID`=" . $id, $queryBD);
   }
-}
 
+  return $queryBD;
+}
 
 
 add_action('wp_ajax_my_ajax_request', 'my_ajax_request');
@@ -358,12 +358,6 @@ function my_ajax_request()
     $termos_e_condicoes = array_combine(array_keys($data["termos_e_condicoes"]), array_values($data["termos_e_condicoes"]));
 
 
-    // $response["error"] = true;
-    // $response['message']  = array_merge( $principal, $contato_emergencia, $contratante, $cruzeiro, $hospede, $solicitacao_especiais, $termos_e_condicoes );
-    // echo json_encode($response);
-    //exit;
-
-
     global $wpdb;
     $table = $wpdb->prefix . 'users_contacts';
 
@@ -383,74 +377,15 @@ function my_ajax_request()
     $wpdb->insert($table, $data);
     $my_id = $wpdb->insert_id;
 
-    $response["teste"]  = $my_id;
-
-    // send email
-    $date_init = date('Y-m-d', strtotime('-1 month'));
-    $date_fim =  date("Y-m-d", strtotime('+1 day'));
-    $table_name = $wpdb->prefix . 'users_contacts';
-    $user_table_name = $wpdb->prefix . 'users';
-    $queryRelatorio = $wpdb->prepare(query_to_email(2, $table_name, $date_init, $date_fim, $my_id), OBJECT);
-    $all_contacts = $wpdb->get_results($queryRelatorio);
-
-    if ($all_contacts) {
-      $theads = array_keys(json_decode(json_encode($all_contacts[0]), true));
-    }
-
-    //$to = ["concierge3@pier1.com.br"]; //desabilitado
-   
-    $to = ["vendasereservas@pier1.com.br"]; // novo email
-   // $to = ["marcelovieira1995@gmail.com"];
-
-
-    $subject = "Contato via site - Pré-embarque";
-
-
-    //$body = get_my_email_template($all_contacts, $theads);
-
-    $all_contacts_to_array = json_decode(json_encode($all_contacts[0]), true);
-
-    $all_fields_contacts_formated = parse_fields_to_email($all_contacts_to_array);
-    $body = get_my_email_template_v2($all_fields_contacts_formated, $page_id);
-
-    // if (strpos($email_contratante, '@') !== false) {
-    //   $to[] = $email_contratante;
-    // }
-
-    // if (strpos($email_agente, '@') !== false) {
-    //   $to[] = $email_agente;
-    // }
-
-    //echo json_encode($all_fields_contacts_formated);
-    //echo $body;
-    // print_r( $all_fields_contacts_formated );
-
-    // exit;
-    // return;
-
-    //$body = "teste body";
-    //$response["teste2"] =  $all_contacts_to_array;
-
-    if (sendmail($to, $subject, $body)) {
-      $response["error"] = false;
-      $response['message']  = "Successfull Request";
-    } else {
-      $response["error"] = true;
-      $response['message']  = "Não enviado, tente mais tarde.";
-    }
+    echo  ["error" => false, "message" => "Pedido criado com sucesso id: $my_id"] ;
+    exit;
   } catch (\Throwable $th) {
-    $response = ["error" => true, "message" => $th->getMessage()];
-  } finally {
-    echo json_encode($response);
+    echo  ["error" => true, "message" =>  $th->getMessage() ] ;    
   }
-
-
-
-
-
 
   exit;
 }
+
 
 function sendmail($to, $subject, $body)
 {
@@ -470,6 +405,71 @@ function sendmail($to, $subject, $body)
 }
 
 
+//TODO criar endpoint POST action=send_mail_contacts para dispardo de emails em fila
+add_action('wp_ajax_send_mail_contacts', 'send_mail_contacts');
+add_action('wp_ajax_nopriv_send_mail_contacts', 'send_mail_contacts');
+
+function send_mail_contacts()
+{
+
+  //header("Content-type: text/html");
+
+  header("Content-type: application/json");
+
+  try {
+
+    global $wpdb;
+    $table = $wpdb->prefix . 'users_contacts';
+
+    // send email
+    $date_init = date('Y-m-d', strtotime('-1 month'));
+    $date_fim =  date("Y-m-d", strtotime('+1 day'));
+    $table_name = $wpdb->prefix . 'users_contacts';
+
+    $queryRelatorio = query_to_email(0, $table_name, $date_init, $date_fim, null);
+
+    //QUERY para filtrar e disparar os emails
+    $queryRelatorio = str_replace("###", "WHERE DADOS.`status` IS NULL", $queryRelatorio);
+
+    $all_contacts = $wpdb->get_results($wpdb->prepare($queryRelatorio, OBJECT), ARRAY_A);
+
+
+    $to = ["cruiseconcierge@pier1.com.br"]; // novo email
+   // $to = ["marcelovieira1995@gmail.com"];
+    $subject = "Contato via site - Pré-embarque";
+
+
+    foreach ($all_contacts as $key => $v) {
+      $all_fields_contacts_formated = parse_fields_to_email($v);
+      
+      $html = get_my_email_template_v2($all_fields_contacts_formated, null);
+
+
+      $id_contact = $v["1 - ID"];
+      $queryUpdate = "UPDATE $table SET `status` = %s WHERE id = $id_contact";
+
+      if(sendmail($to, $subject, $html)){
+        $results = $wpdb->get_results($wpdb->prepare($queryUpdate, "enviado"), ARRAY_A);        
+      } else {
+        $results = $wpdb->get_results($wpdb->prepare($queryUpdate, null), ARRAY_A);
+      }
+
+    }
+
+
+    $response = json_encode(["error" => false, "results" => sprintf("Total enviados: %d", count($all_contacts) )]);
+  } catch (\Throwable $th) {
+    $log_file = WP_CONTENT_DIR . '/error_logs.txt';
+    $log_message = "[" . date('Y-m-d H:i:s') . "] " . get_class($exception) . ": " . $exception->getMessage() . " in " . $exception->getFile() . " on line " . $exception->getLine() . "\n";
+
+    error_log( $log_message . "\n", 3, $log_file);
+    $response = json_encode(["error" => true, "message" => $th->getMessage()]);
+  } finally {
+
+    echo $response;
+    exit;
+  }
+}
 
 
 add_action("sair", 'logout_user_logged', 1, 1);
@@ -486,7 +486,7 @@ add_action('wp_login_failed', 'my_front_end_login_fail');  // hook failed login
 
 function my_front_end_login_fail($username)
 {
-  $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
+  $referrer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;  // where did the post submission come from?
   // if there's a valid referrer, and it's not the default log-in screen
   if (!empty($referrer) && !strstr($referrer, 'wp-login') && !strstr($referrer, 'wp-admin')) {
 
@@ -1350,21 +1350,6 @@ function get_my_email_template_v2($all_fields, $page_id = '')
     }
   }
 
-  // if ($page_id) {
-  //   $body .= '<tr> <td colspan="3" style="padding : 10px;"> <a href="https://mycruiseconcierge.com.br/view_contract/?id=' . $page_id . '">Ver contrato aceito</a> </td> </tr>';
-  // }
-
-
-  // $text_contract = "";
-
-  // if ($page_id) {
-  //   $page_data = get_page($page_id);
-  //   $text_contract = apply_filters('the_content', $page_data->post_content);
-  // }
-
-  //$body .= '<tr> <td colspan="3" style="padding : 10px;"> '. $text_contract .' </td> </tr>';
-
-  // $body = str_replace("TEXT_CONTRACT", $text_contract, $body);
 
   $body .= '</tbody></table>';
 
@@ -1384,19 +1369,20 @@ function is_wplogin()
   return ((in_array($ABSPATH_MY . 'wp-login.php', get_included_files()) || in_array($ABSPATH_MY . 'wp-register.php', get_included_files())) || (isset($_GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'wp-login.php') || $_SERVER['PHP_SELF'] == '/wp-login.php');
 }
 
-function get_home_path_v1() {
-  $home    = set_url_scheme( get_option( 'home' ), 'http' );
-  $siteurl = set_url_scheme( get_option( 'siteurl' ), 'http' );
-  if ( ! empty( $home ) && 0 !== strcasecmp( $home, $siteurl ) ) {
-      $wp_path_rel_to_home = str_ireplace( $home, '', $siteurl ); /* $siteurl - $home */
-      $pos                 = strripos( str_replace( '\\', '/', $_SERVER['SCRIPT_FILENAME'] ), trailingslashit( $wp_path_rel_to_home ) );
-      $home_path           = substr( $_SERVER['SCRIPT_FILENAME'], 0, $pos );
-      $home_path           = trailingslashit( $home_path );
+function get_home_path_v1()
+{
+  $home    = set_url_scheme(get_option('home'), 'http');
+  $siteurl = set_url_scheme(get_option('siteurl'), 'http');
+  if (!empty($home) && 0 !== strcasecmp($home, $siteurl)) {
+    $wp_path_rel_to_home = str_ireplace($home, '', $siteurl); /* $siteurl - $home */
+    $pos                 = strripos(str_replace('\\', '/', $_SERVER['SCRIPT_FILENAME']), trailingslashit($wp_path_rel_to_home));
+    $home_path           = substr($_SERVER['SCRIPT_FILENAME'], 0, $pos);
+    $home_path           = trailingslashit($home_path);
   } else {
-      $home_path = ABSPATH;
+    $home_path = ABSPATH;
   }
 
-  return str_replace( '\\', '/', $home_path );
+  return str_replace('\\', '/', $home_path);
 }
 
 
@@ -1408,16 +1394,17 @@ function version()
 
 
 
-  add_filter('upload_mimes', 'add_custom_upload_mimes');
-    function add_custom_upload_mimes($existing_mimes) {
-$existing_mimes['otf'] = 'application/x-font-otf';
-  	$existing_mimes['woff'] = 'application/x-font-woff';
-  	$existing_mimes['ttf'] = 'application/x-font-ttf';
-  	$existing_mimes['svg'] = 'image/svg+xml';
-  	$existing_mimes['eot'] = 'application/vnd.ms-fontobject';
-  	return $existing_mimes;
-   }
+add_filter('upload_mimes', 'add_custom_upload_mimes');
+function add_custom_upload_mimes($existing_mimes)
+{
+  $existing_mimes['otf'] = 'application/x-font-otf';
+  $existing_mimes['woff'] = 'application/x-font-woff';
+  $existing_mimes['ttf'] = 'application/x-font-ttf';
+  $existing_mimes['svg'] = 'image/svg+xml';
+  $existing_mimes['eot'] = 'application/vnd.ms-fontobject';
+  return $existing_mimes;
+}
 
-add_query_arg( array(
-    'cbPages' => 'reservas',
-), 'https://mycruiseconcierge.com.br/' );
+add_query_arg(array(
+  'cbPages' => 'reservas',
+), 'https://mycruiseconcierge.com.br/');
